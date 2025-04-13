@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: Nanum;
+  src: url("../assets/fonts/nanum.ttf") format("truetype");
+}
+@theme{
+  --font-nanum: "Nanum",sans-serif;
+}
