@@ -2,7 +2,7 @@
 import background from "../assets/background.svg";
 ---
 
-<div class="">
+<div class="relative h-screen">
   <img
     id="background"
     class="fixed top-10 -left-32 w-full h-full -z-10 blur-3xl"
@@ -10,16 +10,12 @@ import background from "../assets/background.svg";
     alt=""
     fetchpriority="high"
   />
-  <section
-    class="bg-black rounded-md m-2 flex justify-center items-center animate-pulse"
-  >
-    <h1 class="text-center font-nanum text-9xl text-white">
-      MBLCDEV X CLAINEV
+  <div>
+    <h1
+      id="quote"
+      class="text-[10vw] font-bold leading-none text-wrap lg:text-nowrap absolute bottom-0"
+    >
+      MBLCDEV <br />X <br /> CLAINEV
     </h1>
-  </section>
+  </div>
 </div>
-<style>
-  section {
-    height: calc(100vh - 1rem);
-  }
-</style>

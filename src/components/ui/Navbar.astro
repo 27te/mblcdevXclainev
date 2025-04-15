@@ -1,0 +1,36 @@
+---
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+import LanguagePicker from "../LanguagePicker.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<header class="flex justify-center items-center mt-5">
+  <div
+    class="inline-block bg-black rounded-full shadow-xl border border-black px-8 py-3"
+  >
+    <nav class="relative flex justify-center items-center gap-4">
+      <ul class="flex justify-center gap-4 h-full">
+        <li>
+          <a
+            href={translatePath("/")}
+            class="text-white font-nanum text-2xl uppercase">{t("nav.home")}</a
+          >
+        </li>
+        <li>
+          <a
+            href={translatePath("/about/")}
+            class="text-white font-nanum text-2xl uppercase">{t("nav.about")}</a
+          >
+        </li>
+      </ul>
+      <LanguagePicker />
+    </nav>
+  </div>
+</header>

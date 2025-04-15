@@ -1,8 +1,15 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatedPath = useTranslatedPath(lang);
 ---
 
 <Layout>
-  <Welcome />
+  <h1>Pagina en espanol</h1>
+  <a
+    href={translatedPath("/about/", lang)}
+    class="px-4 py-1 bg-black text-white">Sobre nosotros</a
+  >
 </Layout>
