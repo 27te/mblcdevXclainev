@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<section
+  class="min-h-[500px] cursor-pointer group flex flex-col justify-between mx-auto mb-10 bg-white/20 backdrop-blur-3xl border-2 border-white/40 w-full rounded-xl shadow-xl overflow-hidden"
+>
+  <div class="h-auto mt-2 mx-5 flex justify-between items-center">
+    <h2 class="text-6xl font-bold font-nanum text-start">{title}</h2>
+    <span
+      class="font-nanum text-7xl group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out"
+      >-></span
+    >
+  </div>
+  <div class="flex w-full relative h-1/2 cont">
+    <img
+      src="/1.webp"
+      alt=""
+      class="img absolute -left-6 -bottom-6 w-1/2 -rotate-6 group-hover:-rotate-12 group-hover:scale-125 transition-all duration-500"
+    />
+    <img
+      src="/2.webp"
+      alt=""
+      class="img absolute -right-6 -bottom-6 w-1/2 rotate-6 group-hover:rotate-12 group-hover:scale-125 transition-all duration-500"
+    />
+  </div>
+</section>
+<script>
+  import { animate, inView } from "motion";
+
+  const imgs = document.querySelectorAll(".img");
+
+  inView(".cont img", (element) => {
+    animate(
+      element,
+      { opacity: 1, y: [100, 0] },
+      {
+        duration: 0.9,
+        easing: [0.17, 0.55, 0.55, 1],
+      }
+    );
+
+    return () => animate(element, { opacity: 0, y: -100 });
+  });
+</script>

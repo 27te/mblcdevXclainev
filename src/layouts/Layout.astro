@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
-import LanguagePicker from "../components/LanguagePicker.astro";
 import Navbar from "../components/ui/Navbar.astro";
 import { getLangFromUrl } from "../i18n/utils";
+import Footer from "../components/Footer.astro";
 
 const lang = getLangFromUrl(Astro.url);
 ---
@@ -17,15 +17,27 @@ const lang = getLangFromUrl(Astro.url);
   <body>
     <Navbar />
     <slot />
-    <!-- <footer>
-      <LanguagePicker />
-    </footer> -->
+    <Footer />
   </body>
 </html>
 
 <script>
   import Lenis from "lenis";
-  const lenis = new Lenis();
+  const lenis = new Lenis({
+    autoRaf: true,
+  });
 
   lenis.on("scroll", (e) => {});
 </script>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-image: url("/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>

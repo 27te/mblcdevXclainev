@@ -1,15 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const translatedPath = useTranslatedPath(lang);
+import SectionCard from "../components/ui/cards/SectionCard.astro";
 ---
 
 <Layout>
-  <h1>Pagina en espanol</h1>
-  <a
-    href={translatedPath("/about/", lang)}
-    class="px-4 py-1 bg-black text-white">Sobre nosotros</a
+  <section
+    class="min-h-[calc(100vh-5rem)] overflow-hidden flex flex-col justify-center items-center"
   >
+    <h1
+      class="text-[30vw] md:text-[12vw] tracking-wide text-balance md:text-nowrap leading-20 text-white text-shadow-2xs text-center md:text-start text-shadow-black font-bold font-nanum"
+    >
+      MBLCDEV X CLAINEV
+    </h1>
+    <p class="max-w-xl text-center mt-10 text-2xl font-nanum text-zinc-800">
+      Impulsa tu negocio con un equipo tecnológico de alto nivel. Creamos
+      software a medida que impulsa el crecimiento, la eficiencia y la
+      innovación.
+    </p>
+  </section>
+  <section
+    class="flex flex-col md:flex-row gap-4 w-full container mx-auto px-2"
+  >
+    <SectionCard title="MAD ROYER" />
+    <SectionCard title="MAD EXHIBITIONS" />
+  </section>
 </Layout>
