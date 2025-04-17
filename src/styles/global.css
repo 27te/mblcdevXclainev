@@ -5,6 +5,15 @@
   font-size: 100 900;  
   src: url("../assets/fonts/nanum.ttf") format("truetype");
 }
+
+@font-face {
+ font-family:Array;
+ font-size: 100 900;  
+ src:url("../assets/fonts/array.woff2") format("woff2");
+ font-display: swap;
+}
+
 @theme{
   --font-nanum: "Nanum",sans-serif;
+  --font-array: "Array",sans-serif;
 }
