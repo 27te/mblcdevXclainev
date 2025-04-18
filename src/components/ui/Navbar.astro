@@ -5,6 +5,7 @@ import {
   useTranslatedPath,
 } from "../../i18n/utils";
 import LanguagePicker from "../LanguagePicker.astro";
+import { Menu } from "@lucide/astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,27 +13,66 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <header
-  class="z-50 sticky top-0 container mx-auto flex justify-center items-center w-full p-4"
+  class="sticky top-4 left-1/2 -translate-x-1/2 z-50 bg-black/80 backdrop-blur-3xl md:w-80 w-[95%] rounded-full border border-white/10 shadow-2xl"
 >
-  <div
-    class="inline-block bg-black rounded-full shadow-xl border border-black px-8 py-3"
+  <div class="px-4 py-3">
+    <div class="flex items-center justify-between">
+      <p class="text-white font-array text-lg">MBLCDEV X CLAINEV</p>
+      <button
+        id="nav-toggle"
+        class="relative w-8 h-8 rounded-full bg-black/40 flex items-center justify-center group transition-all duration-300"
+      >
+        <div
+          class="w-2.5 h-2.5 bg-green-400 rounded-full transition-all duration-300 group-hover:scale-110"
+        >
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <nav
+    id="nav-menu"
+    class="absolute top-full mt-2 left-0 w-full overflow-hidden transition-all duration-500 max-h-0"
   >
-    <nav class="relative flex justify-center items-center gap-4">
-      <ul class="flex justify-center gap-4 h-full">
+    <div
+      class="bg-black/80 backdrop-blur-3xl rounded-2xl p-6 mx-2 border border-white/10"
+    >
+      <ul class="flex flex-col gap-4 text-center">
         <li>
           <a
             href={translatePath("/")}
-            class="text-white font-nanum text-2xl uppercase">{t("nav.home")}</a
+            class="text-white/90 hover:text-white font-nanum text-2xl uppercase transition-colors"
           >
+            {t("nav.home")}
+          </a>
         </li>
         <li>
           <a
             href={translatePath("/about/")}
-            class="text-white font-nanum text-2xl uppercase">{t("nav.about")}</a
+            class="text-white/90 hover:text-white font-nanum text-2xl uppercase transition-colors"
           >
+            {t("nav.about")}
+          </a>
         </li>
       </ul>
-      <LanguagePicker />
-    </nav>
-  </div>
+      <div class="mt-6 flex justify-center">
+        <LanguagePicker />
+      </div>
+    </div>
+  </nav>
 </header>
+
+<script>
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
+  let isOpen = false;
+
+  navToggle?.addEventListener("click", () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      navMenu?.style.setProperty("max-height", `${navMenu.scrollHeight}px`);
+    } else {
+      navMenu?.style.setProperty("max-height", "0px");
+    }
+  });
+</script>
