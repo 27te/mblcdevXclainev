@@ -1,27 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionCard from "../components/ui/cards/SectionCard.astro";
+import Hero from "../components/sections/Hero.astro";
 ---
 
 <Layout>
+  <Hero />
   <section
-    class="min-h-[calc(100vh-5rem)] overflow-hidden flex flex-col justify-center items-center"
+    class="grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-3 container mx-auto px-4"
   >
-    <h1
-      class="text-[23vw] md:text-[11vw] tracking-wide text-balance md:text-nowrap leading-20 text-white text-shadow-2xs text-center md:text-start text-shadow-black font-bold font-array"
-    >
-      MBLCDEV X CLAINEV
-    </h1>
-    <p class="max-w-xl text-center mt-10 text-2xl font-nanum text-zinc-800">
-      Impulsa tu negocio con un equipo tecnológico de alto nivel. Creamos
-      software a medida que impulsa el crecimiento, la eficiencia y la
-      innovación.
-    </p>
-  </section>
-  <section
-    class="flex flex-col lg:flex-row gap-2 w-full container mx-auto px-2"
-  >
-    <SectionCard title="MAD ROYER" />
-    <SectionCard title="MAD EXHIBITIONS" />
+    <SectionCard title="MAD ROYER" cols="2" img="1" />
+    <SectionCard title="MAD EXHIBITIONS" cols="3" img="2" />
   </section>
 </Layout>
