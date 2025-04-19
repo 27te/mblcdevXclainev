@@ -7,6 +7,12 @@
 }
 
 @font-face {
+  font-family: Inter;
+  font-size: 100 900;  
+  src: url("../assets/fonts/inter.ttf") format("truetype");
+}
+
+@font-face {
  font-family:Array;
  font-size: 100 900;  
  src:url("../assets/fonts/array.woff2") format("woff2");
@@ -16,4 +22,7 @@
 @theme{
   --font-nanum: "Nanum",sans-serif;
   --font-array: "Array",sans-serif;
+  --font-inter: "Inter",sans-serif;
+  --color-primary:#3ecf8c;
+  --color-secondary:#f5f5f5;
 }

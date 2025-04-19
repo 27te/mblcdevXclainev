@@ -1,47 +1,56 @@
 ---
 interface Props {
   title: string;
-  cols: string;
   img: string;
 }
-const { title, cols, img } = Astro.props;
+const { title, img } = Astro.props;
 ---
 
 <section
-  class={`h-auto cursor-pointer group flex flex-col justify-between mx-auto mb-10 w-full rounded-xl shadow-xl overflow-hidden ${cols === "" ? "md:col-span-auto" : "md:col-span-" + cols}`}
+  class={`h-[700px] cursor-pointer group bg-secondary flex flex-col justify-between mx-auto mb-10 w-full rounded-xl shadow-xl overflow-hidden`}
 >
-  <div>
-    <div>
-      <div class="bg-black w-full flex gap-8">
-        <p
-          class="text-center text-white uppercase font-array w-full text-nowrap"
-          id="description"
-        >
-          pagina web de una empresa organizadora de eventos
-        </p>
-        <p
-          class="text-center text-white uppercase font-array w-full text-nowrap"
-          id="description"
-        >
-          pagina web de una empresa organizadora de eventos
-        </p>
-        <p
-          class="text-center text-white uppercase font-array w-full text-nowrap"
-          id="description"
-        >
-          pagina web de una empresa organizadora de eventos
-        </p>
-      </div>
-      <img src={`/${img}.png`} alt="image" class="h-[500px] w-full" />
-    </div>
-    <div class="h-auto flex justify-between items-center bg-black p-5">
-      <h2 class="text-6xl font-bold font-nanum text-start text-white">
+  <div
+    class="flex flex-col group-hover:bg-gradient-to-tr to-green-300 via-transparent from-transparent transition-colors duration-700"
+  >
+    <div class="h-auto flex justify-between items-center p-5">
+      <h2 class="text-6xl font-bold font-nanum text-start text-black">
         {title}
       </h2>
       <span
-        class="font-nanum text-7xl group-hover:opacity-100 opacity-0 text-white transition-opacity duration-500 ease-in-out"
+        class="font-nanum text-7xl group-hover:opacity-100 opacity-0 text-black transition-opacity duration-500 ease-in-out"
         >-></span
       >
+    </div>
+    <div class="relative h-[565px] flex justify-center items-center">
+      <div
+        class="absolute bottom-16 group-hover:scale-110 transition duration-500 overflow-hidden border-8 w-1/2 border-white/70 rounded-lg"
+      >
+        <img
+          src={`/${img}.png`}
+          alt="image"
+          class="aspect-video h-full rounded-lg object-contain"
+        />
+      </div>
+    </div>
+    <div class="w-full relative flex gap-8">
+      <p
+        class="text-center text-black uppercase font-array w-full text-nowrap"
+        id="description"
+      >
+        pagina web de una empresa organizadora de eventos
+      </p>
+      <p
+        class="text-center text-black uppercase font-array w-full text-nowrap"
+        id="description"
+      >
+        pagina web de una empresa organizadora de eventos
+      </p>
+      <p
+        class="text-center text-black uppercase font-array w-full text-nowrap"
+        id="description"
+      >
+        pagina web de una empresa organizadora de eventos
+      </p>
     </div>
   </div>
 </section>
