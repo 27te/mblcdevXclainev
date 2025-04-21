@@ -1,0 +1,51 @@
+---
+import { TrendingUp } from "@lucide/astro";
+---
+
+<section class="container mx-auto">
+  <div class="flex justify-center items-center mt-10">
+    <div
+      class="bg-secondary overflow-hidden w-full md:w-auto flex justify-center items-center gap-5 pt-5 px-3 md:pt-10 md:px-10 rounded-xl shadow-xl group"
+    >
+      <img
+        src="/madexhibition-desktop.png"
+        alt="test"
+        class="h-72 lg:h-[500px] aspect-auto rounded-t-md shadow-xl group-hover:rotate-0 rotate-2 transition-transform duration-300 cursor-grab"
+        draggable="false"
+      />
+      <img
+        src="/madexhibition-mobile.png"
+        alt="test"
+        class="h-72 hidden md:block lg:h-[500px] aspect-auto rounded-t-md shadow-xl group-hover:rotate-0 rotate-2 transition-transform duration-300 cursor-grab"
+        draggable="false"
+      />
+    </div>
+  </div>
+  <div
+    class="flex flex-col md:flex-row justify-around items-center gap-5 w-full my-5"
+  >
+    <div class="flex justify-start">
+      <h2 class="text-2xl md:text-4xl font-semibold text-center font-inter">
+        Mad Exhibitions
+      </h2>
+    </div>
+    <div class="flex justify-center flex-wrap">
+      <ul class="flex justify-center items-center gap-5">
+        <li class="flex flex-col font-inter">
+          <span class="text-gray-500">Area</span>
+          <p class="text-xl font-medium">Arte y Música</p>
+        </li>
+        <li class="flex flex-col font-inter">
+          <span class="text-gray-500">Tiempo</span>
+          <p class="text-xl font-medium">1 semana</p>
+        </li>
+        <li class="flex flex-col font-inter">
+          <span class="text-gray-500">Visitas</span>
+          <p class="text-xl font-medium flex justify-center items-center gap-1">
+            280 <TrendingUp class="text-primary" />
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
