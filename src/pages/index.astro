@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import SectionCard from "../components/ui/cards/SectionCard.astro";
 import Hero from "../components/sections/Hero.astro";
 import Services from "../components/sections/Services.astro";
+import Works from "../components/sections/Works.astro";
+import Contact from "../components/sections/Contact.astro";
 ---
 
 <Layout>
@@ -20,8 +22,22 @@ import Services from "../components/sections/Services.astro";
         Trabajos Recientes
       </h2>
     </div>
-    <SectionCard title="MAD ROYER" img="1" />
-    <SectionCard title="MAD EXHIBITIONS" img="royer" />
+    <Works />
   </section>
-  <Services />
+  <section>
+    <div class="relative flex justify-center items-center">
+      <!-- <span
+        class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+      >
+        Año {new Date().getFullYear()}
+      </span> -->
+      <h2
+        class="text-5xl text-center font-bold font-array uppercase mt-12 mb-10"
+      >
+        Trabajemos Juntos
+      </h2>
+    </div>
+    <Contact />
+  </section>
+  <!-- //<Services /> -->
 </Layout>
