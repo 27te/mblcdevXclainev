@@ -1,43 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SectionCard from "../components/ui/cards/SectionCard.astro";
 import Hero from "../components/sections/Hero.astro";
-import Services from "../components/sections/Services.astro";
 import Works from "../components/sections/Works.astro";
 import Contact from "../components/sections/Contact.astro";
+import SectionHeader from "../components/ui/SectionHeader.astro";
 ---
 
 <Layout>
   <Hero />
   <section class="container mx-auto px-4">
-    <div class="relative flex justify-center items-center">
+    <SectionHeader title="Trabajos Recientes">
       <span
         class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
       >
         Año {new Date().getFullYear()}
       </span>
-      <h2
-        class="text-5xl text-center font-bold font-array uppercase mt-12 mb-10"
-      >
-        Trabajos Recientes
-      </h2>
-    </div>
-    <Works />
+    </SectionHeader>
+    <Works
+      title="Mad Exhibitions"
+      area="Arte y Música"
+      time="1 semana"
+      views="280"
+      desktop="/madexhibition-desktop.png"
+      mobile="/madexhibition-mobile.png"
+    />
+    <Works
+      title="Mad Royer"
+      area="Arte"
+      time="1 semana"
+      views="1k"
+      desktop="/madroyer-desktop.png"
+      mobile="/madroyer-mobile.png"
+    />
   </section>
-  <section>
-    <div class="relative flex justify-center items-center">
-      <!-- <span
-        class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
-      >
-        Año {new Date().getFullYear()}
-      </span> -->
-      <h2
-        class="text-5xl text-center font-bold font-array uppercase mt-12 mb-10"
-      >
-        Trabajemos Juntos
-      </h2>
-    </div>
-    <Contact />
-  </section>
-  <!-- //<Services /> -->
 </Layout>

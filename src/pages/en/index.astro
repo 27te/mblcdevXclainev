@@ -1,27 +1,35 @@
 ---
+import Hero from "../../components/sections/Hero.astro";
+import Works from "../../components/sections/Works.astro";
+import SectionHeader from "../../components/ui/SectionHeader.astro";
 import Layout from "../../layouts/Layout.astro";
-import SectionCard from "../../components/ui/cards/SectionCard.astro";
-import Clients from "../../components/sections/Clients.astro";
 ---
 
 <Layout>
-  <section
-    class="min-h-[calc(100vh-5rem)] overflow-hidden flex flex-col justify-center items-center"
-  >
-    <h1
-      class="text-[23vw] md:text-[11vw] tracking-wide text-balance md:text-nowrap leading-20 text-white text-shadow-2xs text-center md:text-start text-shadow-black font-bold font-array"
-    >
-      MBLCDEV X CLAINEV
-    </h1>
-    <p class="max-w-xl text-center mt-10 text-2xl font-nanum text-zinc-800">
-      Boost your business with a high-level technology team. We create custom
-      software that drives growth, efficiency, and innovation.
-    </p>
-  </section>
-  <section
-    class="flex flex-col lg:flex-row gap-2 w-full container mx-auto px-2"
-  >
-    <SectionCard title="MAD ROYER" />
-    <SectionCard title="MAD EXHIBITIONS" />
+  <Hero />
+  <section class="container mx-auto px-4">
+    <SectionHeader title="Latest Works">
+      <span
+        class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+      >
+        Year {new Date().getFullYear()}
+      </span>
+    </SectionHeader>
+    <Works
+      title="Mad Exhibitions"
+      area="Art & Music"
+      time="1 week"
+      views="280"
+      desktop="/madexhibition-desktop.png"
+      mobile="/madexhibition-mobile.png"
+    />
+    <Works
+      title="Mad Royer"
+      area="Art"
+      time="1 week"
+      views="1k"
+      desktop="/madroyer-desktop.png"
+      mobile="/madroyer-mobile.png"
+    />
   </section>
 </Layout>
