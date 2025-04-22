@@ -1,3 +1,22 @@
+---
+import { getLangFromUrl } from "../../i18n/utils";
+
+const data = {
+  en: {
+    text: "Boost your business with a high-tech team. We create software tailored to your needs, driving growth, efficiency, and innovation.",
+    btnOne: "Start your project now",
+    btnTwo: "Services",
+  },
+  es: {
+    text: "Impulsa tu negocio con un equipo tecnológico de alto nivel. Creamos software a medida que impulsa el crecimiento, la eficiencia y la innovación.",
+    btnOne: "Empieza tu proyecto ahora",
+    btnTwo: "Servicios",
+  },
+};
+
+const lang = getLangFromUrl(Astro.url);
+---
+
 <section
   class="bg-gradient-to-b from-white via-green-200 to-transparent min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-10 justify-center items-center"
 >
@@ -8,8 +27,7 @@
     <span class="text-primary">CLAINEV</span>
   </h1>
   <p class="max-w-xl text-center mt-10 text-xl font-inter text-zinc-800">
-    Impulsa tu negocio con un equipo tecnológico de alto nivel. Creamos software
-    a medida que impulsa el crecimiento, la eficiencia y la innovación.
+    {data[lang].text}
   </p>
   <div>
     <div class="flex gap-6 flex-col md:flex-row">
@@ -17,13 +35,13 @@
         href="/contact"
         class="px-8 py-4 bg-primary text-white font-inter text-xl font-medium rounded-lg hover:bg-primary transition-colors duration-200"
       >
-        Empieza tu proyecto ahora
+        {data[lang].btnOne}
       </a>
       <a
         href="/services"
         class="px-8 py-4 bg-zinc-800 text-white font-inter text-xl font-medium rounded-lg hover:bg-zinc-700 transition-colors duration-200"
       >
-        Servicios
+        {data[lang].btnTwo}
       </a>
     </div>
   </div>
