@@ -4,6 +4,7 @@ import Hero from "../components/sections/Hero.astro";
 import Works from "../components/sections/Works.astro";
 import SectionHeader from "../components/ui/SectionHeader.astro";
 import Services from "../components/sections/Services.astro";
+import Faq from "../components/sections/Faq.astro";
 ---
 
 <Layout>
@@ -36,4 +37,14 @@ import Services from "../components/sections/Services.astro";
     </div>
   </section>
   <Services />
+  <section class="container mx-auto px-4">
+    <SectionHeader title="Preguntas Frecuentes">
+      <span
+        class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+      >
+        como empezamos
+      </span>
+    </SectionHeader>
+    <Faq />
+  </section>
 </Layout>
