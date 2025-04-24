@@ -1,14 +1,29 @@
+---
+import LanguagePicker from "./LanguagePicker.astro";
+---
+
 <footer class="container mx-auto py-5 px-2">
   <div
-    class="bg-black backdrop-blur-3xl h-20 rounded-xl flex justify-between items-center px-4"
+    class="bg-secondary border border-black/20 backdrop-blur-3xl h-24 rounded-xl flex flex-col md:flex-row justify-center gap-5 md:justify-between items-center px-4"
   >
-    <a class="text-primary font-nanum text-2xl">antonio@mblcdev.com</a>
+    <a class="font-nanum text-3xl"
+      >antonio<span class="text-primary">@mblcdev.com</span></a
+    >
     <div>
       <ul class="flex justify-center items-center gap-4 font-medium font-nanum">
-        <li><a href="#" class="text-2xl text-primary">LinkedIn</a></li>
-        <li><a href="#" class="text-2xl text-primary">Instagram</a></li>
-        <li><a href="#" class="text-2xl text-primary">Twitter</a></li>
+        <li>
+          <a href="#" class="text-2xl uppercase">LinkedIn</a>
+        </li>
+        -
+        <li>
+          <a href="#" class="text-2xl uppercase">Instagram</a>
+        </li>
+        -
+        <li><a href="#" class="text-2xl uppercase">Twitter</a></li>
       </ul>
+    </div>
+    <div class="flex justify-center">
+      <LanguagePicker />
     </div>
   </div>
 </footer>

@@ -16,23 +16,17 @@ export const translations = {
 ---
 
 <ul
-  class="relative text-white flex flex-col justify-center items-center cursor-pointer transition-all duration-300"
+  class="text-white flex gap-2 justify-center items-center cursor-pointer transition-all duration-300"
 >
-  <li
-    class="btn-translate transition-all duration-300 font-nanum text-2xl uppercase"
-  >
-    {translations[lang].Idioma}
-  </li>
   {
     Object.entries(languages).map(([lang, label]) => (
-      <li class="relative hidden languages transition-all duration-300">
+      <li class="transition-all duration-300">
         <a href={translatedPath("/", lang)}>
           {label === "Spanish" ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"
               height="28"
-              class="absolute top-5 left-0"
               viewBox="0 0 512 512"
             >
               <mask id="IconifyId1963bb05e5bbd49c21">
@@ -141,7 +135,6 @@ export const translations = {
               xmlns="http://www.w3.org/2000/svg"
               width="28"
               height="28"
-              class="absolute top-15 left-0"
               viewBox="0 0 512 512"
             >
               <mask id="IconifyId1963bb05e5bbd49c23">
@@ -169,12 +162,3 @@ export const translations = {
     ))
   }
 </ul>
-<script>
-  const btnTranslate = document.querySelector(".btn-translate");
-  const listTranslate = document.querySelectorAll(".languages");
-  btnTranslate?.addEventListener("click", () => {
-    listTranslate.forEach((li) => {
-      li.classList.toggle("hidden");
-    });
-  });
-</script>
