@@ -26,20 +26,20 @@ const lang = getLangFromUrl(Astro.url);
     <span>MBLCDEV</span>
     <span class="text-primary">CLAINEV</span>
   </h1>
-  <p class="max-w-xl text-center mt-10 text-xl font-inter text-zinc-800">
+  <p class="max-w-xl text-center mt-10 text-lg font-inter text-zinc-800">
     {data[lang].text}
   </p>
   <div>
     <div class="flex gap-6 flex-col md:flex-row">
       <a
         href="/contact"
-        class="px-8 py-4 bg-primary text-white font-inter text-xl font-medium rounded-lg hover:bg-primary transition-colors duration-200"
+        class="px-8 py-4 bg-primary text-white font-inter text-base font-medium rounded-full hover:bg-primary transition-colors duration-200"
       >
         {data[lang].btnOne}
       </a>
       <a
         href="/services"
-        class="px-8 py-4 bg-zinc-800 text-white font-inter text-xl font-medium rounded-lg hover:bg-zinc-700 transition-colors duration-200"
+        class="px-8 py-4 bg-zinc-800 text-white font-inter text-base font-medium rounded-full hover:bg-zinc-700 transition-colors duration-200"
       >
         {data[lang].btnTwo}
       </a>
