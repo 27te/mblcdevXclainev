@@ -29,8 +29,13 @@ const lang = getLangFromUrl(Astro.url);
 
   lenis.on("scroll", (e) => {});
 </script>
-<style>
+<style is:global>
   html {
     scroll-behavior: smooth;
+  }
+  img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
   }
 </style>
