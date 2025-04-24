@@ -4,7 +4,6 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "../../i18n/utils";
-import LanguagePicker from "../LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -57,9 +56,6 @@ const translatePath = useTranslatedPath(lang);
           </a>
         </li>
       </ul>
-      <div class="mt-6 flex justify-center">
-        <LanguagePicker />
-      </div>
     </div>
   </nav>
 </header>
