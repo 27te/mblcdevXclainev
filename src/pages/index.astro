@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/sections/Hero.astro";
 import Works from "../components/sections/Works.astro";
 import SectionHeader from "../components/ui/SectionHeader.astro";
-import Select from "../components/sections/Select.astro";
+import Services from "../components/sections/Services.astro";
 ---
 
 <Layout>
@@ -16,22 +16,24 @@ import Select from "../components/sections/Select.astro";
         Año {new Date().getFullYear()}
       </span>
     </SectionHeader>
-    <Works
-      title="Mad Exhibitions"
-      area="Arte y Música"
-      time="1 semana"
-      views="280"
-      desktop="/madexhibition-desktop.png"
-      mobile="/madexhibition-mobile.png"
-    />
-    <Works
-      title="Mad Royer"
-      area="Arte"
-      time="1 semana"
-      views="1k"
-      desktop="/madroyer-desktop.png"
-      mobile="/madroyer-mobile.png"
-    />
+    <div class="space-y-20">
+      <Works
+        title="Mad Exhibitions"
+        area="Arte y Música"
+        time="1 semana"
+        views="280"
+        desktop="/madexhibition-desktop.png"
+        mobile="/madexhibition-mobile.png"
+      />
+      <Works
+        title="Mad Royer"
+        area="Arte"
+        time="1 semana"
+        views="1k"
+        desktop="/madroyer-desktop.png"
+        mobile="/madroyer-mobile.png"
+      />
+    </div>
   </section>
-  <Select />
+  <Services />
 </Layout>
