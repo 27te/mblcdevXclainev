@@ -1,34 +1,41 @@
-<section class="container mx-auto flex justify-center items-center flex-col">
-  <button class="glow-button">Connect</button>
-</section>
+---
+import { Mail } from "@lucide/astro";
+---
 
-<style>
-  .glow-button {
-    background: #1e1e00;
-    color: #fff700;
-    font-weight: bold;
-    font-size: 2rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.4s ease,
-      text-shadow 0.3s ease;
+<div class="flex flex-col justify-center items-center gap-10">
+  <p class="text-lg font-inter text-center">
+    Empieza ahora con tu crecimiento digital con nosotros has crecer tu marca y
+    llega al siguiente nivel.
+  </p>
+  <div class="flex justify-center items-center flex-col gap-2">
+    <button
+      class="relative flex justify-center items-center gap-1 overflow-hidden bg-black text-white font-bold rounded-full shadow-xl px-4 py-3 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+      id="contact"
+    >
+      <div
+        class="absolute inset-0 blur-md bg-white rounded-full h-4 scale-110 z-0"
+      >
+      </div>
+      <Mail class="" />
+      antonio@mblcdev.com
+    </button>
+    <div class="h-5">
+      <p class="text-sm font-inter hidden" id="message">
+        ✨Copiado al portapapeles.✨
+      </p>
+    </div>
+  </div>
+</div>
 
-    /* Sin glow al inicio */
-    box-shadow: none;
-    text-shadow: none;
-  }
-
-  .glow-button:hover {
-    transform: translateY(-6px);
-    box-shadow:
-      0 0 25px #fff700,
-      0 0 60px #fff700,
-      inset 0 0 20px #fff700,
-      0 10px 20px rgba(0, 0, 0, 0.4);
-    text-shadow: 0 0 10px #fff700;
-  }
-</style>
+<script>
+  const btncontact = document.querySelector("#contact");
+  const message = document.querySelector("#message");
+  btncontact?.addEventListener("click", () => {
+    navigator.clipboard.writeText(btncontact.textContent!);
+    message?.classList.remove("hidden");
+    setTimeout(() => {
+      console.log("change");
+      message?.classList.add("hidden");
+    }, 2000);
+  });
+</script>

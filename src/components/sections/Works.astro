@@ -8,36 +8,27 @@ interface Props {
   time: string;
   views: string;
   desktop: string;
-  mobile: string;
 }
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const { title, area, time, views, desktop, mobile }: Props = Astro.props;
+const { title, area, time, views, desktop }: Props = Astro.props;
 ---
 
 <section class="container mx-auto">
-  <div class="flex justify-center items-center">
-    <div
-      class="bg-secondary border border-black/20 h-full overflow-hidden w-full flex justify-center items-center gap-5 pt-5 px-3 md:pt-10 md:px-10 rounded-xl shadow-xl group"
-    >
-      <img
-        src={desktop}
-        alt="test"
-        class="max-h-[600px] h-auto md:block hidden aspect-auto rounded-t-md shadow-xl group-hover:rotate-0 rotate-2 transition-transform duration-300 cursor-grab"
-        draggable="false"
-      />
-      <img
-        src={mobile}
-        alt="test"
-        class="max-h-[600px] h-auto aspect-auto rounded-t-md shadow-xl group-hover:rotate-0 rotate-2 transition-transform duration-300 cursor-grab"
-        draggable="false"
-      />
-    </div>
+  <div
+    class="flex justify-center items-center overflow-hidden rounded-md shadow-xl"
+  >
+    <img
+      src={desktop}
+      alt="test"
+      class="h-full aspect-auto hover:scale-110 transition-transform duration-300 cursor-grab"
+      draggable="false"
+    />
   </div>
   <div
-    class="flex flex-col md:flex-row justify-around items-center gap-5 w-full my-5 px-5"
+    class="flex flex-col md:flex-row justify-between items-center gap-5 w-full my-5 px-5"
   >
     <div class="flex justify-start">
       <h2 class="text-2xl md:text-4xl font-semibold text-center font-inter">

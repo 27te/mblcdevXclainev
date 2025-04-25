@@ -5,11 +5,12 @@ import Works from "../components/sections/Works.astro";
 import SectionHeader from "../components/ui/SectionHeader.astro";
 import Services from "../components/sections/Services.astro";
 import Faq from "../components/sections/Faq.astro";
+import Contact from "../components/sections/Contact.astro";
 ---
 
 <Layout>
   <Hero />
-  <section class="container mx-auto px-4">
+  <section class="container mx-auto px-4 mt-20">
     <SectionHeader title="Trabajos Recientes">
       <span
         class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
@@ -24,7 +25,7 @@ import Faq from "../components/sections/Faq.astro";
         time="1 semana"
         views="280"
         desktop="/madexhibition-desktop.png"
-        mobile="/madexhibition-mobile.png"
+        client:load
       />
       <Works
         title="Mad Royer"
@@ -32,12 +33,12 @@ import Faq from "../components/sections/Faq.astro";
         time="1 semana"
         views="1k"
         desktop="/madroyer-desktop.png"
-        mobile="/madroyer-mobile.png"
+        client:load
       />
     </div>
   </section>
   <Services />
-  <section class="container mx-auto px-4">
+  <section class="container mx-auto px-4 mt-20">
     <SectionHeader title="Preguntas Frecuentes">
       <span
         class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
@@ -46,5 +47,15 @@ import Faq from "../components/sections/Faq.astro";
       </span>
     </SectionHeader>
     <Faq />
+  </section>
+  <section class="container mx-auto px-4 mt-20">
+    <SectionHeader title="Trabajemos Juntos">
+      <span
+        class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+      >
+        contactar ahora
+      </span>
+    </SectionHeader>
+    <Contact />
   </section>
 </Layout>
