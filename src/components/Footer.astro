@@ -1,8 +1,9 @@
 ---
+import { Linkedin, Instagram, Twitter } from "@lucide/astro";
 import LanguagePicker from "./LanguagePicker.astro";
 ---
 
-<footer class="container mx-auto py-5 px-2 mt-20">
+<footer class="max-w-[90ch] mx-auto py-5 px-2 mt-20">
   <div
     class="flex flex-col md:flex-row justify-center gap-5 md:justify-between items-center px-4"
   >
@@ -13,30 +14,41 @@ import LanguagePicker from "./LanguagePicker.astro";
         <li>
           <a
             href="#"
-            class="text-2xl uppercase border border-black/20 px-4 py-2 rounded-full"
-            >LinkedIn</a
+            class="text-2xl uppercase shadow-lg bg-[#0077b5] text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
           >
+            <Linkedin class="block" />
+          </a>
         </li>
 
         <li>
           <a
             href="#"
-            class="text-2xl uppercase border border-black/20 px-4 py-2 rounded-full"
-            >Instagram</a
+            class="text-2xl uppercase shadow-lg bg-gradient-to-l to-[#ff7a00] via-[#ff0069] from-[#7638fa] text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
           >
+            <Instagram class="block" />
+          </a>
         </li>
 
         <li>
           <a
             href="#"
-            class="text-2xl uppercase border border-black/20 px-4 py-2 rounded-full"
-            >Twitter</a
+            class="text-2xl uppercase shadow-lg bg-black text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
           >
+            <Twitter class="block" />
+          </a>
         </li>
       </ul>
     </div>
     <div class="flex justify-center">
       <LanguagePicker />
     </div>
+  </div>
+  <div
+    class="flex justify-center items-center mt-5 gap-1 text-zinc-500 font-inter"
+  >
+    <span class="text-center"
+      >&copy; {new Date().getFullYear()} Casi Todos los derechos reservados. Antonio
+      (27te)
+    </span>
   </div>
 </footer>

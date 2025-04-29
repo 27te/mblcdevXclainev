@@ -9,19 +9,12 @@ const { className, text, title, image } = Astro.props;
 ---
 
 <div
-  class={`bg-primary/5 shadow-xl overflow-hidden rounded-md h-96 w-full border border-black/20 p-4 ${className} hover:scale-105 transition-transform duration-500`}
+  class={` overflow-hidden w-full p-4 ${className} hover:scale-105 transition-transform duration-500`}
 >
-  <h3 class="text-2xl font-array font-bold uppercase">
+  <h3 class="text-xl font-inter font-bold uppercase">
     {title}
   </h3>
-  <p class="font-inter text-base">
+  <p class="font-inter text-base text-zinc-600">
     {text}
   </p>
-  <div class="relative w-full h-64 mt-10 overflow-hidden">
-    <img
-      src={image}
-      alt="imagen"
-      class="w-full h-full aspect-auto object-contain"
-    />
-  </div>
 </div>
