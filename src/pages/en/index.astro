@@ -7,27 +7,29 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout>
   <Hero />
-  <section class="container mx-auto px-4">
-    <SectionHeader title="Latest Works">
-      <span
-        class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
-      >
-        Year {new Date().getFullYear()}
-      </span>
-    </SectionHeader>
-    <Works
-      title="Mad Exhibitions"
-      area="Art & Music"
-      time="1 week"
-      views="280"
-      desktop="/madexhibition-desktop.png"
-    />
-    <Works
-      title="Mad Royer"
-      area="Art"
-      time="1 week"
-      views="1k"
-      desktop="/madroyer-desktop.png"
-    />
-  </section>
+  <main class="max-w-[90ch] mx-auto">
+    <section class="container mx-auto px-4">
+      <SectionHeader title="Latest Works">
+        <span
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+        >
+          Year {new Date().getFullYear()}
+        </span>
+      </SectionHeader>
+      <Works
+        title="Mad Exhibitions"
+        area="Art & Music"
+        time="1 week"
+        views="280"
+        desktop="/madexhibition-desktop.png"
+      />
+      <Works
+        title="Mad Royer"
+        area="Art"
+        time="1 week"
+        views="1k"
+        desktop="/madroyer-desktop.png"
+      />
+    </section>
+  </main>
 </Layout>
