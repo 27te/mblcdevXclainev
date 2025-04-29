@@ -1,6 +1,10 @@
 ---
 import { Linkedin, Instagram, Twitter } from "@lucide/astro";
 import LanguagePicker from "./LanguagePicker.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="max-w-[90ch] mx-auto py-5 px-2 mt-20">
@@ -47,8 +51,7 @@ import LanguagePicker from "./LanguagePicker.astro";
     class="flex justify-center items-center mt-5 gap-1 text-zinc-500 font-inter"
   >
     <span class="text-center"
-      >&copy; {new Date().getFullYear()} Casi Todos los derechos reservados. Antonio
-      (27te)
+      >&copy; {new Date().getFullYear()} {t("footer.copyright")}. Antonio (27te)
     </span>
   </div>
 </footer>

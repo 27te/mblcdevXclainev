@@ -12,6 +12,7 @@ export const ui = {
     "work.views": "Vistas",
     "work.area": "Área",
     "work.time": "Tiempo",
+    "footer.copyright": "Casi Todos los derechos reservados",
   },
   en: {
     "nav.home": "Home",
@@ -19,6 +20,7 @@ export const ui = {
     "work.views": "Views",
     "work.area": "Area",
     "work.time": "Time",
+    "footer.copyright": "Almost All Rights Reserved",
   },
 } as const;
 

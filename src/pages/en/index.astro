@@ -1,8 +1,12 @@
 ---
+import Contact from "../../components/sections/Contact.astro";
+import Faq from "../../components/sections/Faq.astro";
 import Hero from "../../components/sections/Hero.astro";
+import Services from "../../components/sections/Services.astro";
 import Works from "../../components/sections/Works.astro";
 import SectionHeader from "../../components/ui/SectionHeader.astro";
 import Layout from "../../layouts/Layout.astro";
+import Products from "../../sections/products.astro";
 ---
 
 <Layout>
@@ -30,6 +34,37 @@ import Layout from "../../layouts/Layout.astro";
         views="1k"
         desktop="/madroyer-desktop.png"
       />
+    </section>
+    <section class="px-4 mt-20">
+      <SectionHeader title="Products">
+        <span
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+        >
+          Increase
+        </span>
+      </SectionHeader>
+      <Products />
+    </section>
+    <Services />
+    <section class="container mx-auto px-4 mt-20">
+      <SectionHeader title="Faq">
+        <span
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+        >
+          How we work
+        </span>
+      </SectionHeader>
+      <Faq />
+    </section>
+    <section class="container mx-auto px-4 mt-20">
+      <SectionHeader title="Let's work together">
+        <span
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+        >
+          Contact now
+        </span>
+      </SectionHeader>
+      <Contact />
     </section>
   </main>
 </Layout>
