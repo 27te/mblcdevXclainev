@@ -1,11 +1,14 @@
 ---
 import { Mail } from "@lucide/astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="flex flex-col justify-center items-center gap-10">
   <p class="text-lg font-inter text-center">
-    Empieza ahora con tu crecimiento digital con nosotros has crecer tu marca y
-    llega al siguiente nivel.
+    {t("contact.text")}
   </p>
   <div class="flex justify-center items-center flex-col gap-2">
     <button
@@ -21,7 +24,7 @@ import { Mail } from "@lucide/astro";
     </button>
     <div class="h-5">
       <p class="text-sm font-inter hidden" id="message">
-        ✨Copiado al portapapeles.✨
+        {t("contact.button")}
       </p>
     </div>
   </div>

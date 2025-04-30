@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Web Development",
+    "description": "We develop websites for small and medium-sized businesses"
+  },
+  {
+    "title": "Custom Systems",
+    "description": "We build custom systems tailored to your company"
+  },
+  {
+    "title": "E-Commerce",
+    "description": "We create online stores that allow you to sell your products"
+  },
+  {
+    "title": "Consulting",
+    "description": "We offer consulting in software development"
+  }
+]

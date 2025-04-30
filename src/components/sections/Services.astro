@@ -1,39 +1,17 @@
 ---
 import Box from "../ui/Box.astro";
+const { item } = Astro.props;
+console.log(item);
 ---
 
-<section class="mt-20 px-4">
-  <h2
-    class="relative text-5xl text-center font-bold font-array uppercase mt-12 mb-10"
-  >
-    <span
-      class="absolute -top-4 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
-    >
-      nos define
-    </span>
-    Calidad, Estilo y Elegancia
-  </h2>
+<div>
   <div
     class="grid grid-cols-2 border border-black/10 container mx-auto shadow-md overflow-hidden"
   >
-    <Box
-      title="Desarrollo de Sitios Web"
-      text="Creamos sitios web modernos y funcionales que reflejan la esencia de tu marca y cumplen con los estándares de calidad más altos."
-    />
-    <Box
-      title="Sistemas Personalizados"
-      text="Desarrollamos sistemas personalizados que se adaptan a tus necesidades específicas y te brindan una experiencia única."
-      className="border-l border-l-black/10"
-    />
-    <Box
-      title="Diseño de Interfaces"
-      text="Diseñamos interfaces de usuario intuitivas y atractivas que se adaptan a cualquier dispositivo y te permiten navegar de manera fácil y rápida."
-      className="border-t border-t-black/10"
-    />
-    <Box
-      title="Optimización SEO"
-      text="Aseguramos que tu sitio web esté optimizado para motores de búsqueda, lo que mejora su visibilidad y posicionamiento en línea."
-      className="border-t border-t-black/10 border-l border-l-black/10"
-    />
+    {
+      item?.map((service: any) => (
+        <Box title={service.title} text={service.description} />
+      ))
+    }
   </div>
-</section>
+</div>

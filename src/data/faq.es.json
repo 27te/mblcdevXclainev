@@ -1,0 +1,14 @@
+[
+  {
+    "question": "¿Cuál es la mejor manera de aprender programación?",
+    "answer": "Comienza con los fundamentos y trabaja tu camino hacia el conocimiento. Practica regularmente. Pregunta. No te desanimes a preguntar. Continúa aprendiendo y sigue codificando!"
+  },
+  {
+    "question": "¿Qué lenguajes de programación debería aprender?",
+    "answer": "Hay muchas opciones de lenguajes de programación para elegir. Algunos populares incluyen Python, Java, C++ y JavaScript. Elige el que mejor se adapte a tus intereses y metas."
+  },
+  {
+    "question": "¿Cómo puedo mejorar mis habilidades de programación?",
+    "answer": "Practica regularmente. Lee libros y artículos. Toma cursos en línea. Únete a comunidades de codificación. Resuelve problemas. Continúa aprendiendo y sigue codificando!"
+  }
+]

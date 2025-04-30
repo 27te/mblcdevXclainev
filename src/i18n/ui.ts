@@ -13,6 +13,9 @@ export const ui = {
     "work.area": "Área",
     "work.time": "Tiempo",
     "footer.copyright": "Casi Todos los derechos reservados",
+    "contact.text":
+      "Comienza tu crecimiento digital ahora. Con nosotros, crece tu marca y alcanza el siguiente nivel.",
+    "contact.button": "✨Copiado al portapapeles.✨",
   },
   en: {
     "nav.home": "Home",
@@ -21,6 +24,9 @@ export const ui = {
     "work.area": "Area",
     "work.time": "Time",
     "footer.copyright": "Almost All Rights Reserved",
+    "contact.text":
+      "Start your digital growth now. With us, grow your brand and reach the next level.",
+    "contact.button": "✨Copied to clipboard.✨",
   },
 } as const;
 

@@ -7,6 +7,11 @@ import Services from "../components/sections/Services.astro";
 import Faq from "../components/sections/Faq.astro";
 import Contact from "../components/sections/Contact.astro";
 import Products from "../sections/products.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const faq = await import(`../data/faq.${lang}.json`);
+const services = await import(`../data/service.${lang}.json`);
 ---
 
 <Layout>
@@ -47,7 +52,16 @@ import Products from "../sections/products.astro";
       </SectionHeader>
       <Products />
     </section>
-    <Services />
+    <section class="px-4 mt-20">
+      <SectionHeader title="Servicios">
+        <span
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+        >
+          Vamos, joder
+        </span>
+      </SectionHeader>
+      <Services item={services.default} />
+    </section>
     <section class="container mx-auto px-4 mt-20">
       <SectionHeader title="Preguntas Frecuentes">
         <span
@@ -56,7 +70,7 @@ import Products from "../sections/products.astro";
           como empezamos
         </span>
       </SectionHeader>
-      <Faq />
+      <Faq item={faq.default} />
     </section>
     <section class="container mx-auto px-4 mt-20">
       <SectionHeader title="Trabajemos Juntos">
