@@ -1,6 +1,4 @@
 ---
-import { Linkedin, Instagram, Twitter } from "@lucide/astro";
-import LanguagePicker from "./LanguagePicker.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -8,45 +6,7 @@ const t = useTranslations(lang);
 ---
 
 <footer class="max-w-[90ch] mx-auto py-5 px-2 mt-20">
-  <div
-    class="flex flex-col md:flex-row justify-center gap-5 md:justify-between items-center px-4"
-  >
-    <div>
-      <ul
-        class="flex justify-center items-center gap-4 font-medium font-nanum text-black"
-      >
-        <li>
-          <a
-            href="#"
-            class="text-2xl uppercase shadow-lg bg-[#0077b5] text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
-          >
-            <Linkedin class="block" />
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#"
-            class="text-2xl uppercase shadow-lg bg-gradient-to-l to-[#ff7a00] via-[#ff0069] from-[#7638fa] text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
-          >
-            <Instagram class="block" />
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#"
-            class="text-2xl uppercase shadow-lg bg-black text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
-          >
-            <Twitter class="block" />
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="flex justify-center">
-      <LanguagePicker />
-    </div>
-  </div>
+  <hr />
   <div
     class="flex justify-center items-center mt-5 gap-1 text-zinc-500 font-inter"
   >

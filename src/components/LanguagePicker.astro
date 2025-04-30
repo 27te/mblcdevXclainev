@@ -4,28 +4,23 @@ import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const translatedPath = useTranslatedPath(lang);
-
-export const translations = {
-  en: {
-    Idioma: "Language",
-  },
-  es: {
-    Idioma: "Idioma",
-  },
-};
 ---
 
 <ul
-  class="text-white flex gap-2 justify-center items-center cursor-pointer transition-all duration-300"
+  class="fixed bottom-5 right-5 text-white flex gap-2 justify-center items-center cursor-pointer transition-all duration-300"
 >
   {
-    Object.entries(languages).map(([lang, label]) => (
+    Object.entries(languages).map(([langKey, label]) => (
       <li class="transition-all duration-300">
-        <a href={translatedPath("/", lang)}>
-          {label === "Spanish" ? (
+        <a
+          href={translatedPath("/", langKey)}
+          class={`${(lang === "en" && langKey === "es") || (lang === "es" && langKey === "en") ? "block" : "hidden"}`}
+        >
+          {(lang === "en" && langKey === "es") ||
+          (lang === "es" && label === "Spanish") ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-12"
+              class="h-7 shadow-xl rounded-full"
               viewBox="0 0 512 512"
             >
               <mask id="IconifyId1963bb05e5bbd49c21">
@@ -132,7 +127,7 @@ export const translations = {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-12"
+              class="h-7 shadow-xl rounded-full"
               viewBox="0 0 512 512"
             >
               <mask id="IconifyId1963bb05e5bbd49c23">
@@ -150,7 +145,7 @@ export const translations = {
                 <path fill="#0052b4" d="M0 0h256v256H0Z" />
                 <path
                   fill="#eee"
-                  d="m187 243l57-41h-70l57 41l-22-67zm-81 0l57-41H93l57 41l-22-67zm-81 0l57-41H12l57 41l-22-67zm162-81l57-41h-70l57 41l-22-67zm-81 0l57-41H93l57 41l-22-67zm-81 0l57-41H12l57 41l-22-67Zm162-82l57-41h-70l57 41l-22-67Zm-81 0l57-41H93l57 41l-22-67zm-81 0l57-41H12l57 41l-22-67Z"
+                  d="m187 243l57-41h-70l57 41l-22-67zm-81 0l57-41H93l57 41l-22-67zm-81 0l57-41H12l57 41l-22-67zm162-81l57-41h-70l57 41l-22-67Zm-81 0l57-41H93l57 41l-22-67zm-81 0l57-41H12l57 41l-22-67Z"
                 />
               </g>
             </svg>

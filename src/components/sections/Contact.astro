@@ -1,5 +1,5 @@
 ---
-import { Mail } from "@lucide/astro";
+import { Instagram, Linkedin, Mail, Twitter } from "@lucide/astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -28,6 +28,36 @@ const t = useTranslations(lang);
       </p>
     </div>
   </div>
+  <ul
+    class="flex justify-center items-center gap-4 font-medium font-nanum text-black"
+  >
+    <li>
+      <a
+        href="#"
+        class="hover:scale-110 transition-transform duration-300 text-2xl uppercase shadow-xl bg-[#0077b5] text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
+      >
+        <Linkedin class="block" />
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#"
+        class="hover:scale-110 transition-transform duration-300 text-2xl uppercase shadow-xl bg-gradient-to-l to-[#ff7a00] via-[#ff0069] from-[#7638fa] text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
+      >
+        <Instagram class="block" />
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#"
+        class="hover:scale-110 transition-transform duration-300 text-2xl uppercase shadow-xl bg-black text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
+      >
+        <Twitter class="block" />
+      </a>
+    </li>
+  </ul>
 </div>
 
 <script>

@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Navbar from "../components/ui/Navbar.astro";
 import { getLangFromUrl } from "../i18n/utils";
 import Footer from "../components/Footer.astro";
+import LanguagePicker from "../components/LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 ---
@@ -14,9 +15,10 @@ const lang = getLangFromUrl(Astro.url);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clainev</title>
   </head>
-  <body>
+  <body class="bg-cream">
     <Navbar />
     <slot />
+    <LanguagePicker />
     <Footer />
   </body>
 </html>
