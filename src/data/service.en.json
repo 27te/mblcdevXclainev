@@ -1,18 +1,22 @@
 [
   {
     "title": "Web Development",
-    "description": "We develop websites for small and medium-sized businesses"
+    "description": "We develop websites for small and medium-sized businesses",
+    "icon": "LayoutTemplate"
   },
   {
     "title": "Custom Systems",
-    "description": "We build custom systems tailored to your company"
+    "description": "We build custom systems tailored to your company",
+    "icon": "Settings"
   },
   {
     "title": "E-Commerce",
-    "description": "We create online stores that allow you to sell your products"
+    "description": "We create online stores that allow you to sell your products",
+    "icon": "ShoppingBag"
   },
   {
     "title": "Consulting",
-    "description": "We offer consulting in software development"
+    "description": "We offer consulting in software development",
+    "icon": "Shield"
   }
 ]
