@@ -1,18 +1,22 @@
 [
   {
     "title": "Desarrollo Web",
-    "description": "Desarrollo de sitios web para pequeñas y medianas empresas"
+    "description": "Desarrollo de sitios web para pequeñas y medianas empresas",
+    "icon": "LayoutTemplate"
   },
   {
     "title": "Sistemas Personalizados",
-    "description": "Desarrollamos sistemas personalizados para tu empresa"
+    "description": "Desarrollamos sistemas personalizados para tu empresa",
+    "icon": "Settings"
   },
   {
     "title": "E-Commerce",
-    "description": "Desarrollamos tiendas virtuales que te permiten vender en línea"
+    "description": "Desarrollamos tiendas virtuales que te permiten vender en línea",
+    "icon": "ShoppingBag"
   },
   {
     "title": "Consultoría",
-    "description": "Brindamos consultoría en el desarrollo de software"
+    "description": "Brindamos consultoría en el desarrollo de software",
+    "icon": "Shield"
   }
 ]
