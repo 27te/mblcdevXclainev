@@ -18,35 +18,35 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <section
-  class="bg-gradient-to-b from-cream via-green-200 to-transparent min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-10 justify-center items-center px-4"
+  class="min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-10 justify-center items-center px-4"
 >
   <h1
     class="text-[23vw] md:text-[11vw] tracking-wide text-balance md:text-nowrap leading-20 text-shadow-2xs text-center md:text-start text-shadow-black font-bold font-array"
   >
-    <span> MBLCDEV</span>
-    <span class="text-primary"> CLAINEV</span>
+    <span class="text-title"> MBLCDEV</span>
+    <span class="text-clainev"> CLAINEV</span>
   </h1>
-  <p class="max-w-xl text-center mt-10 text-lg font-inter text-zinc-800">
+  <p class="max-w-xl text-center mt-10 text-lg font-inter text-subtitle">
     {data[lang].text}
   </p>
   <div>
     <div class="flex gap-6 flex-col md:flex-row">
       <a
         href="/contact"
-        class="relative hover:scale-105 text-center px-8 py-4 bg-primary text-white overflow-hidden font-inter text-base font-medium rounded-full transition-all duration-200"
+        class="relative hover:scale-105 text-center px-8 py-4 bg-tertiary text-white overflow-hidden font-inter text-base font-medium rounded-full transition-all duration-200"
       >
         <div
-          class="absolute inset-0 blur-md bg-white rounded-full h-4 scale-110 z-0"
+          class="absolute inset-0 blur-md bg-secondary rounded-full h-4 scale-110 z-0"
         >
         </div>
         {data[lang].btnOne}
       </a>
       <a
         href="/services"
-        class="relative hover:scale-105 text-center overflow-hidden px-8 py-4 bg-zinc-800 text-white font-inter text-base font-medium rounded-full transition-all duration-200"
+        class="relative hover:scale-105 text-center overflow-hidden px-8 py-4 bg-accent text-white font-inter text-base font-medium rounded-full transition-all duration-200"
       >
         <div
-          class="absolute inset-0 blur-md bg-white rounded-full h-4 scale-110 z-0"
+          class="absolute inset-0 blur-md bg-secondary rounded-full h-4 scale-110 z-0"
         >
         </div>
         {data[lang].btnTwo}
