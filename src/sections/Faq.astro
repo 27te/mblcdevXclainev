@@ -10,10 +10,10 @@ const { item } = Astro.props;
       item?.map((faq: any) => (
         <details class="group py-5 px-4">
           <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-            <span class="font-inter">{faq.question}</span>
+            <span class="font-inter text-subtitle">{faq.question}</span>
             <ArrowDownLeft class="transition duration-500 group-open:rotate-180" />
           </summary>
-          <p class="text-neutral-600 font-inter mt-3 group-open:animate-fadeIn">
+          <p class="text-accent font-inter mt-3 group-open:animate-fadeIn">
             {faq.answer}
           </p>
         </details>
