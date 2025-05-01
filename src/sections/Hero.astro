@@ -18,7 +18,7 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <section
-  class="min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-10 justify-center items-center px-4"
+  class="bg-gradient-to-b from-transparent via-tertiary/40 to-transparent min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-10 justify-center items-center px-4"
 >
   <h1
     class="text-[23vw] md:text-[11vw] tracking-wide text-balance md:text-nowrap leading-20 text-shadow-2xs text-center md:text-start text-shadow-black font-bold font-array"
@@ -31,8 +31,10 @@ const lang = getLangFromUrl(Astro.url);
   </p>
   <div>
     <div class="flex gap-6 flex-col md:flex-row">
-      <a
-        href="/contact"
+      <button
+        data-cal-link="mblcdev/15min"
+        data-cal-namespace="15min"
+        data-cal-config='{"layout":"month_view"}'
         class="relative hover:scale-105 text-center px-8 py-4 bg-tertiary text-white overflow-hidden font-inter text-base font-medium rounded-full transition-all duration-200"
       >
         <div
@@ -40,9 +42,9 @@ const lang = getLangFromUrl(Astro.url);
         >
         </div>
         {data[lang].btnOne}
-      </a>
+      </button>
       <a
-        href="/services"
+        href="#services"
         class="relative hover:scale-105 text-center overflow-hidden px-8 py-4 bg-accent text-white font-inter text-base font-medium rounded-full transition-all duration-200"
       >
         <div
