@@ -38,6 +38,12 @@ const { title } = Astro.props;
 <style is:global>
   html {
     scroll-behavior: smooth;
+    cursor: var(--normal-cursor);
+  }
+  a,
+  button,
+  summary {
+    cursor: var(--pointer-cursor);
   }
   img {
     user-select: none;

@@ -30,6 +30,8 @@
   --color-clainev:#3EC988;
   --color-title:#1A120B;
   --color-subtitle:#493628;
+  --normal-cursor:url('/normal.cur'),auto;
+  --pointer-cursor:url("/pointer.cur"),pointer;
 }
 
 
