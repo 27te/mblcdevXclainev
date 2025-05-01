@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/sections/Hero.astro";
-import Works from "../components/sections/Works.astro";
+import Hero from "../sections/Hero.astro";
+import Works from "../sections/Works.astro";
 import SectionHeader from "../components/ui/SectionHeader.astro";
-import Services from "../components/sections/Services.astro";
-import Faq from "../components/sections/Faq.astro";
-import Contact from "../components/sections/Contact.astro";
-import Products from "../sections/products.astro";
+import Services from "../sections/Services.astro";
+import Faq from "../sections/Faq.astro";
+import Contact from "../sections/Contact.astro";
+import Products from "../sections/Products.astro";
 import { getLangFromUrl } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -14,7 +14,7 @@ const faq = await import(`../data/faq.${lang}.json`);
 const services = await import(`../data/service.${lang}.json`);
 ---
 
-<Layout>
+<Layout title="Desarrollo web a medida | Mblcdev">
   <Hero />
   <main class="max-w-[90ch] mx-auto">
     <section class="container mx-auto px-4 mt-20">

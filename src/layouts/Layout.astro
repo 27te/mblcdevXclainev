@@ -2,10 +2,14 @@
 import "../styles/global.css";
 import Navbar from "../components/ui/Navbar.astro";
 import { getLangFromUrl } from "../i18n/utils";
-import Footer from "../components/Footer.astro";
-import LanguagePicker from "../components/LanguagePicker.astro";
+import Footer from "../sections/Footer.astro";
+import LanguagePicker from "../components/ui/LanguagePicker.astro";
 
+interface Props {
+  title: string;
+}
 const lang = getLangFromUrl(Astro.url);
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,7 +17,7 @@ const lang = getLangFromUrl(Astro.url);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clainev</title>
+    <title>{title}</title>
   </head>
   <body class="bg-cream">
     <Navbar />
