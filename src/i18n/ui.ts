@@ -8,7 +8,6 @@ export const defaultLang = "es";
 export const ui = {
   es: {
     "nav.home": "Inicio",
-    "nav.blog": "Blog",
     "nav.about": "Sobre mi",
     "work.views": "Vistas",
     "work.area": "Área",
@@ -20,7 +19,6 @@ export const ui = {
   },
   en: {
     "nav.home": "Home",
-    "nav.blog": "Blog",
     "nav.about": "About me",
     "work.views": "Views",
     "work.area": "Area",
