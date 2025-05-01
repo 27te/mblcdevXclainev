@@ -11,10 +11,10 @@ const { className, text, title } = Astro.props;
   <div>
     <slot name="icon" />
   </div>
-  <h3 class="text-xl font-inter font-bold uppercase">
+  <h3 class="text-xl font-inter font-bold uppercase text-title">
     {title}
   </h3>
-  <p class="font-inter text-base text-zinc-600">
+  <p class="font-inter text-base text-subtitle">
     {text}
   </p>
 </div>
