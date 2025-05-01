@@ -20,30 +20,32 @@ const services = await import(`../../data/service.${lang}.json`);
     <section class="container mx-auto px-4">
       <SectionHeader title="Latest Works">
         <span
-          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-tertiary"
         >
           Year {new Date().getFullYear()}
         </span>
       </SectionHeader>
-      <Works
-        title="Mad Exhibitions"
-        area="Art & Music"
-        time="1 week"
-        views="280"
-        desktop="/madexhibition-desktop.png"
-      />
-      <Works
-        title="Mad Royer"
-        area="Art"
-        time="1 week"
-        views="1k"
-        desktop="/madroyer-desktop.png"
-      />
+      <div class="space-y-20">
+        <Works
+          title="Mad Exhibitions"
+          area="Art & Music"
+          time="1 week"
+          views="280"
+          desktop="/madexhibition-desktop.png"
+        />
+        <Works
+          title="Mad Royer"
+          area="Art"
+          time="1 week"
+          views="1k"
+          desktop="/madroyer-desktop.png"
+        />
+      </div>
     </section>
     <section class="px-4 mt-20">
       <SectionHeader title="Products">
         <span
-          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-tertiary"
         >
           Increase
         </span>
@@ -53,7 +55,7 @@ const services = await import(`../../data/service.${lang}.json`);
     <section class="px-4 mt-20">
       <SectionHeader title="Services">
         <span
-          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-tertiary"
         >
           let's fucking go
         </span>
@@ -63,7 +65,7 @@ const services = await import(`../../data/service.${lang}.json`);
     <section class="container mx-auto px-4 mt-20">
       <SectionHeader title="Faq">
         <span
-          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-tertiary"
         >
           How we work
         </span>
@@ -73,7 +75,7 @@ const services = await import(`../../data/service.${lang}.json`);
     <section class="container mx-auto px-4 mt-20">
       <SectionHeader title="Let's work together">
         <span
-          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-primary"
+          class="absolute top-5 left-[60%] rotate-6 font-nanum text-2xl font-medium text-tertiary"
         >
           Contact now
         </span>
