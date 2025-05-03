@@ -23,13 +23,10 @@
   --font-nanum: "Nanum",sans-serif;
   --font-array: "Array",sans-serif;
   --font-inter: "Inter",sans-serif;
-  --color-primary:#FFFDF6;
-  --color-secondary:#FAF6E9;
-  --color-tertiary:#99BC85;
-  --color-accent:#A67B5B;
+  --color-primary:#6d9a7b;
+  --color-secondary:#2e2e2e;
+  --color-tertiary:#f2f0e3;
   --color-clainev:#3EC988;
-  --color-title:#1A120B;
-  --color-subtitle:#493628;
   --normal-cursor:url('/normal.cur'),auto;
   --pointer-cursor:url("/pointer.cur"),pointer;
 }
