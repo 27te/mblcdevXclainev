@@ -18,7 +18,7 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <section
-  class="bg-gradient-to-b from-transparent via-tertiary/40 to-transparent min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-10 justify-center items-center px-4"
+  class="min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-10 justify-center items-center px-4"
 >
   <h1
     class="text-[23vw] md:text-[11vw] tracking-wide text-balance md:text-nowrap leading-20 text-shadow-2xs text-center md:text-start text-shadow-black font-bold font-array"
@@ -35,20 +35,20 @@ const lang = getLangFromUrl(Astro.url);
         data-cal-link="mblcdev/15min"
         data-cal-namespace="15min"
         data-cal-config='{"layout":"month_view"}'
-        class="relative hover:scale-105 text-center px-8 py-4 bg-tertiary text-white overflow-hidden font-inter text-base font-medium rounded-full transition-all duration-200"
+        class="relative hover:scale-105 text-center px-8 py-4 bg-primary text-tertiary overflow-hidden font-inter text-base font-medium rounded-[0.75rem] transition-all duration-200"
       >
         <div
-          class="absolute inset-0 blur-md bg-secondary rounded-full h-4 scale-110 z-0"
+          class="absolute inset-0 blur-md bg-tertiary rounded-full h-4 scale-110 z-0"
         >
         </div>
         {data[lang].btnOne}
       </button>
       <a
         href="#services"
-        class="relative hover:scale-105 text-center overflow-hidden px-8 py-4 bg-accent text-white font-inter text-base font-medium rounded-full transition-all duration-200"
+        class="relative hover:scale-105 text-center overflow-hidden px-8 py-4 bg-secondary text-tertiary font-inter text-base font-medium rounded-[0.75rem] transition-all duration-200"
       >
         <div
-          class="absolute inset-0 blur-md bg-secondary rounded-full h-4 scale-110 z-0"
+          class="absolute inset-0 blur-md bg-tertiary rounded-full h-4 scale-110 z-0"
         >
         </div>
         {data[lang].btnTwo}
