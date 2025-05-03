@@ -5,10 +5,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer class="max-w-[90ch] mx-auto py-5 px-2 mt-20">
+<footer class="w-full md:w-[70%] mx-auto py-5 px-2 mt-20">
   <hr />
   <div
-    class="flex justify-center items-center mt-5 gap-1 text-subtitle/70 font-inter"
+    class="flex justify-center items-center mt-5 gap-1 text-secondary/80 font-inter"
   >
     <span class="text-center"
       >&copy; {new Date().getFullYear()} {t("footer.copyright")}. Antonio (27te)
