@@ -1,14 +1,22 @@
 [
   {
-    "question": "¿Cuál es la mejor manera de aprender programación?",
-    "answer": "Comienza con los fundamentos y trabaja tu camino hacia el conocimiento. Practica regularmente. Pregunta. No te desanimes a preguntar. Continúa aprendiendo y sigue codificando!"
+    "question": "¿Qué pasa si no tengo identidad de marca?",
+    "answer": "No te preocupes, ¡estamos aquí para ayudarte! Si aún no tienes una identidad de marca, nosotros podemos crearla desde cero. Trabajamos contigo para entender los valores, el tono y la misión de tu empresa, y luego diseñamos una identidad visual que se alinee con tu visión y la haga destacar."
   },
   {
-    "question": "¿Qué lenguajes de programación debería aprender?",
-    "answer": "Hay muchas opciones de lenguajes de programación para elegir. Algunos populares incluyen Python, Java, C++ y JavaScript. Elige el que mejor se adapte a tus intereses y metas."
+    "question": "¿Cuánto tiempo tomará desarrollar mi proyecto?",
+    "answer": "El tiempo de desarrollo varía dependiendo de la complejidad del proyecto y las funcionalidades requeridas. Sin embargo, te damos una estimación desde el principio, y trabajamos contigo para asegurarnos de que el proyecto avance dentro del tiempo acordado. Nuestro objetivo es entregarte resultados de alta calidad en un plazo razonable."
   },
   {
-    "question": "¿Cómo puedo mejorar mis habilidades de programación?",
-    "answer": "Practica regularmente. Lee libros y artículos. Toma cursos en línea. Únete a comunidades de codificación. Resuelve problemas. Continúa aprendiendo y sigue codificando!"
+    "question": "¿Puedo modificar mi proyecto después de que esté en marcha?",
+    "answer": "Sí, por supuesto. Te ofrecemos soporte continuo después de la entrega del proyecto. Si en el futuro necesitas hacer ajustes, añadir nuevas funciones o actualizar el diseño, estaremos aquí para ayudarte con esas modificaciones."
+  },
+  {
+    "question": "¿Qué tipo de soporte y mantenimiento ofrecen después de lanzar mi sitio web?",
+    "answer": "Ofrecemos soporte completo y mantenimiento según el plan que elijas. Esto incluye actualizaciones regulares, resolución de problemas técnicos, y ajustes menores en el diseño o funcionalidad. Nos aseguramos de que tu sitio esté siempre actualizado y funcionando sin problemas."
+  },
+  {
+    "question": "¿Cómo garantizan que el diseño de mi sitio web sea eficaz y atractivo para mi público objetivo?",
+    "answer": "Cada proyecto lo comenzamos con una fase de investigación, donde analizamos tu industria, tu competencia y las necesidades de tu audiencia. Después, creamos un diseño que no solo sea atractivo visualmente, sino también funcional y optimizado para atraer a tus clientes ideales. Además, te involucramos en el proceso de diseño para asegurarnos de que el resultado final sea justo lo que necesitas."
   }
 ]

@@ -1,14 +1,22 @@
 [
   {
-    "question": "What is the best way to learn programming?",
-    "answer": "Start with the basics and work your way up. Practice regularly. Ask questions. Don't be afraid to ask for help. Keep learning and keep coding!"
+    "question": "What happens if I don't have a brand identity?",
+    "answer": "Don't worry, we're here to help! If you don't have a brand identity yet, we can create it from scratch. We work with you to understand your company's values, tone, and mission, and then design a visual identity that aligns with your vision and makes you stand out."
   },
   {
-    "question": "What programming languages should I learn?",
-    "answer": "There are many programming languages to choose from. Some popular ones include Python, Java, C++, and JavaScript. Choose the one that best suits your interests and goals."
+    "question": "How long will it take to develop my project?",
+    "answer": "The development time varies depending on the complexity of the project and the required functionalities. However, we provide an estimate from the beginning, and work with you to ensure the project progresses within the agreed time frame. Our goal is to deliver high-quality results within a reasonable time."
   },
   {
-    "question": "How can I improve my programming skills?",
-    "answer": "Practice regularly. Read books and articles. Take online courses. Join coding communities. Practice solving problems. Keep learning and keep coding!"
+    "question": "Can I modify my project after it is launched?",
+    "answer": "Yes, of course. We offer ongoing support after project delivery. If you need adjustments, new features, or design updates in the future, we’re here to help with those modifications."
+  },
+  {
+    "question": "What type of support and maintenance do you offer after my website is launched?",
+    "answer": "We offer full support and maintenance according to the plan you choose. This includes regular updates, troubleshooting, and minor adjustments to design or functionality. We ensure your website stays up-to-date and runs smoothly."
+  },
+  {
+    "question": "How do you ensure the design of my website is effective and attractive to my target audience?",
+    "answer": "We begin each project with a research phase where we analyze your industry, competition, and your audience’s needs. Then, we create a design that is not only visually appealing but also functional and optimized to attract your ideal customers. Additionally, we involve you in the design process to make sure the final result is exactly what you need."
   }
 ]
