@@ -18,42 +18,46 @@ const { title, area, time, views, desktop }: Props = Astro.props;
 
 <section class="container mx-auto">
   <div
-    class="flex justify-center items-center overflow-hidden rounded-md shadow-xl"
+    class="flex justify-center items-center rounded-lg shadow-lg overflow-hidden"
   >
     <img
       src={desktop}
       alt="test"
-      class="h-full aspect-auto hover:scale-110 transition-transform duration-300 cursor-grab mix-blend-multiply"
+      class="h-full aspect-auto cursor-grab mix-blend-multiply"
       draggable="false"
     />
   </div>
   <div
-    class="flex flex-col md:flex-row justify-between items-center gap-5 w-full my-5 px-5"
+    class="flex flex-col md:flex-row justify-between items-center gap-5 w-full px-5 py-5"
   >
     <div class="flex justify-start">
-      <h2
-        class="text-2xl md:text-4xl font-semibold text-center font-inter text-title"
-      >
+      <h2 class="text-2xl font-bold text-center text-secondary">
         {title}
       </h2>
     </div>
     <div class="flex justify-center flex-wrap">
       <ul class="flex justify-center items-center gap-5">
         <li class="flex flex-col font-inter">
-          <span class="text-accent">{t("work.area")}</span>
-          <p class="text-xl font-medium text-subtitle">{area}</p>
+          <span class="text-secondary/70 text-sm font-medium"
+            >{t("work.area")}</span
+          >
+          <p class="text-base font-medium">{area}</p>
         </li>
         <li class="flex flex-col font-inter">
-          <span class="text-accent">{t("work.time")}</span>
-          <p class="text-xl font-medium text-subtitle">{time}</p>
+          <span class="text-secondary/70 text-sm font-medium"
+            >{t("work.time")}</span
+          >
+          <p class="text-base font-medium">{time}</p>
         </li>
         <li class="flex flex-col font-inter">
-          <span class="text-accent">{t("work.views")}</span>
+          <span class="text-secondary/70 text-sm font-medium"
+            >{t("work.views")}</span
+          >
           <p
-            class="text-xl font-medium flex justify-center items-center gap-1 text-subtitle"
+            class="text-base font-medium flex justify-center items-center gap-1"
           >
             {views}
-            <TrendingUp class="text-tertiary" />
+            <TrendingUp class="text-quaternary" />
           </p>
         </li>
       </ul>

@@ -7,23 +7,19 @@ const t = useTranslations(lang);
 ---
 
 <div class="flex flex-col justify-center items-center gap-10">
-  <p class="text-lg font-inter text-center text-subtitle">
+  <p class="text-base font-medium text-center">
     {t("contact.text")}
   </p>
   <div class="flex justify-center items-center flex-col gap-2">
     <button
-      class="relative flex justify-center items-center gap-1 overflow-hidden bg-secondary text-tertiary font-semibold text-lg font-inter rounded-[0.75rem] shadow-xl px-4 py-3 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+      class="relative flex justify-center items-center gap-1 overflow-hidden bg-secondary text-tertiary font-semibold text-lg rounded-[0.75rem] shadow-xl px-8 py-4 hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 cursor-pointer"
       id="contact"
     >
-      <div
-        class="absolute inset-0 blur-md bg-tertiary rounded-full h-2 scale-110 z-0"
-      >
-      </div>
       <Mail />
       antonio@mblcdev.com
     </button>
     <div class="h-5">
-      <p class="text-sm font-inter hidden text-accent" id="message">
+      <p class="text-sm hidden text-accent" id="message">
         {t("contact.button")}
       </p>
     </div>
@@ -71,7 +67,6 @@ const t = useTranslations(lang);
     navigator.clipboard.writeText(btncontact.textContent!);
     message?.classList.remove("hidden");
     setTimeout(() => {
-      console.log("change");
       message?.classList.add("hidden");
     }, 2000);
   });

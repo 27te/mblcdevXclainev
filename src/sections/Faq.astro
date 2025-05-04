@@ -5,15 +5,15 @@ const { item } = Astro.props;
 ---
 
 <div>
-  <div class="grid divide-y-2 divide-black/10 mx-auto">
+  <div class="grid divide-y-2 divide-primary/30 mx-auto">
     {
       item?.map((faq: any) => (
         <details class="group py-5 px-4">
           <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
-            <span class="font-inter text-subtitle">{faq.question}</span>
+            <span>{faq.question}</span>
             <ArrowDownLeft class="transition duration-500 group-open:rotate-180" />
           </summary>
-          <p class="text-accent font-inter mt-3 group-open:animate-fadeIn">
+          <p class="text-secondary/70 mt-3 group-open:animate-fade-in-up">
             {faq.answer}
           </p>
         </details>

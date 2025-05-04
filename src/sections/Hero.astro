@@ -3,13 +3,17 @@ import { getLangFromUrl } from "../i18n/utils";
 
 const data = {
   en: {
-    text: "Boost your business with a high-tech team. We create software tailored to your needs, driving growth, efficiency, and innovation.",
-    btnOne: "Start your project now",
+    title: "Your Problem, Our",
+    titleWord: "Solution",
+    text: "Our goal is to simplify the complex, and give you the right tools to focus on growing.",
+    btnOne: "Discover how we can help you",
     btnTwo: "Services",
   },
   es: {
-    text: "Impulsa tu negocio con un equipo tecnológico de alto nivel. Creamos software a medida que impulsa el crecimiento, la eficiencia y la innovación.",
-    btnOne: "Empieza tu proyecto ahora",
+    title: "Tu Problema, Nuestra",
+    titleWord: "Solución",
+    text: "Nuestro objetivo es simplificar lo complejo, y darte las herramientas adecuadas para que puedas concentrarte en crecer.",
+    btnOne: "Descubre cómo podemos ayudarte",
     btnTwo: "Servicios",
   },
 };
@@ -18,39 +22,34 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <section
-  class="min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-10 justify-center items-center px-4"
+  class="min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-5 justify-center items-center px-4"
 >
-  <h1
-    class="text-[23vw] md:text-[11vw] tracking-wide text-balance md:text-nowrap leading-20 text-shadow-2xs text-center md:text-start text-shadow-black font-bold font-array"
-  >
-    <span class="text-title"> MBLCDEV</span>
-    <span class="text-clainev"> CLAINEV</span>
-  </h1>
-  <p class="max-w-xl text-center mt-10 text-lg font-inter text-subtitle">
-    {data[lang].text}
-  </p>
+  <div class="flex justify-center items-center flex-col">
+    <h1
+      class="tracking-wide font-display text-5xl md:text-7xl lg:text-9xl text-center text-balance antialiased"
+    >
+      {data[lang].title}<span class="text-primary">
+        {data[lang].titleWord}</span
+      >
+    </h1>
+    <p class="max-w-xl mt-5 text-center text-base font-medium antialiased">
+      {data[lang].text}
+    </p>
+  </div>
   <div>
     <div class="flex gap-6 flex-col md:flex-row">
       <button
         data-cal-link="mblcdev/15min"
         data-cal-namespace="15min"
         data-cal-config='{"layout":"month_view"}'
-        class="relative hover:scale-105 text-center px-8 py-4 bg-primary text-tertiary overflow-hidden font-inter text-base font-medium rounded-[0.75rem] transition-all duration-200"
+        class="hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 bg-quaternary text-tertiary overflow-hidden font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
       >
-        <div
-          class="absolute inset-0 blur-md bg-tertiary rounded-full h-4 scale-110 z-0"
-        >
-        </div>
         {data[lang].btnOne}
       </button>
       <a
         href="#services"
-        class="relative hover:scale-105 text-center overflow-hidden px-8 py-4 bg-secondary text-tertiary font-inter text-base font-medium rounded-[0.75rem] transition-all duration-200"
+        class="hover:scale-[1.02] active:scale-[0.98] text-center overflow-hidden px-8 py-4 bg-secondary text-tertiary font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
       >
-        <div
-          class="absolute inset-0 blur-md bg-tertiary rounded-full h-4 scale-110 z-0"
-        >
-        </div>
         {data[lang].btnTwo}
       </a>
     </div>

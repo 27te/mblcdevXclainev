@@ -3,24 +3,24 @@ import { ArrowRightIcon } from "@lucide/astro";
 ---
 
 <div>
-  <div class="flex flex-col gap-4 justify-center items-center group">
+  <div class="flex flex-col gap-4 justify-center items-center">
     <div class="aspect-auto">
       <img
         src="/prod.png"
         alt="mb-inventory"
         draggable="false"
-        class="w-full h-full aspect-auto rounded-xl shadow-xl border border-black/20 mix-blend-multiply"
+        class="w-full h-full aspect-auto rounded-lg shadow-lg mix-blend-multiply"
       />
     </div>
-    <div class="flex justify-between flex-wrap items-center w-full">
-      <h3 class="text-3xl font-inter font-bold text-title">MB INVENTORY</h3>
+    <div class="flex justify-between flex-wrap items-center w-full px-5">
+      <h3 class="text-2xl font-bold text-title">MB INVENTORY</h3>
       <a
         href="/product/mbinventory"
-        class="bg-primary rounded-[0.75rem] shadow-xl text-lg font-inter flex justify-center items-center px-4 py-3 text-tertiary hover:scale-110 transition-transform duration-500 transform-gpu"
+        class="bg-secondary rounded-lg px-8 py-4 text-base font-medium font-inter flex gap-x-2 justify-center items-center text-tertiary hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 transform-gpu shadow-lg"
       >
         <span> Try it now </span>
-        <span>
-          <ArrowRightIcon />
+        <span class="">
+          <ArrowRightIcon class="size-4" />
         </span>
       </a>
     </div>
