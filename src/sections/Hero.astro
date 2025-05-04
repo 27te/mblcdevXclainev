@@ -22,36 +22,45 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <section
-  class="min-h-[calc(100vh-3rem)] overflow-hidden flex flex-col gap-5 justify-center items-center px-4"
+  class="min-h-screen overflow-hidden relative flex flex-col justify-center items-center px-4"
 >
-  <div class="flex justify-center items-center flex-col">
-    <h1
-      class="tracking-wide font-display text-5xl md:text-7xl lg:text-9xl text-center text-balance antialiased"
-    >
-      {data[lang].title}<span class="text-primary">
-        {data[lang].titleWord}</span
+  <img
+    src="/forest.webp"
+    alt="bg"
+    class="absolute left-0 top-0 w-screen h-screen opacity-75 -z-10 mix-blend-multiply object-cover mask-b-to-transparent"
+  />
+  <div
+    class="w-full md:w-[70%] mx-auto text-secondary flex flex-col justify-center gap-5"
+  >
+    <div class="flex justify-center items-center flex-col">
+      <h1
+        class="tracking-wide font-display text-5xl md:text-7xl lg:text-9xl text-center text-balance antialiased"
       >
-    </h1>
-    <p class="max-w-xl mt-5 text-center text-base font-medium antialiased">
-      {data[lang].text}
-    </p>
-  </div>
-  <div>
-    <div class="flex gap-6 flex-col md:flex-row">
-      <button
-        data-cal-link="mblcdev/15min"
-        data-cal-namespace="15min"
-        data-cal-config='{"layout":"month_view"}'
-        class="hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 bg-quaternary text-tertiary overflow-hidden font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
-      >
-        {data[lang].btnOne}
-      </button>
-      <a
-        href="#services"
-        class="hover:scale-[1.02] active:scale-[0.98] text-center overflow-hidden px-8 py-4 bg-secondary text-tertiary font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
-      >
-        {data[lang].btnTwo}
-      </a>
+        {data[lang].title}<span class="text-primary">
+          {data[lang].titleWord}</span
+        >
+      </h1>
+      <p class="max-w-xl mt-5 text-center text-base font-medium antialiased">
+        {data[lang].text}
+      </p>
+    </div>
+    <div class="flex justify-center items-center">
+      <div class="flex gap-6 flex-col md:flex-row">
+        <button
+          data-cal-link="mblcdev/15min"
+          data-cal-namespace="15min"
+          data-cal-config='{"layout":"month_view"}'
+          class="hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 bg-quaternary text-tertiary overflow-hidden font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
+        >
+          {data[lang].btnOne}
+        </button>
+        <a
+          href="#services"
+          class="hover:scale-[1.02] active:scale-[0.98] text-center overflow-hidden px-8 py-4 bg-secondary text-tertiary font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
+        >
+          {data[lang].btnTwo}
+        </a>
+      </div>
     </div>
   </div>
 </section>
