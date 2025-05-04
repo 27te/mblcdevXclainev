@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Mb Inventory | Sistema de manejo de inventario para empresas">
+  <section class="min-h-screen flex justify-center flex-col items-center">
+    <div class="flex justify-center items-center flex-col mb-10 h-[50vh]">
+      <h1
+        class="tracking-wide font-display text-5xl md:text-7xl lg:text-9xl text-center text-balance antialiased"
+      >
+        MB <span class="text-primary">INVENTORY</span>
+      </h1>
+      <p class="max-w-xl mt-5 text-center text-base font-medium antialiased">
+        Sistema de manejo de inventario para empresas
+      </p>
+      <ul class="flex justify-center items-center gap-2 mt-10">
+        <li class="flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-primary"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span class="text-base font-medium"
+            >Control total de tu inventario.</span
+          >
+        </li>
+        <li class="flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-primary"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span class="text-base font-medium">Reportes detallados.</span>
+        </li>
+        <li class="flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-primary"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span class="text-base font-medium"
+            >Alertas automáticas de stock bajo</span
+          >
+        </li>
+      </ul>
+    </div>
+    <div>
+      <img
+        src="/prod.png"
+        alt="inventory"
+        class="mix-blend-multiply border border-secondary/10 rounded-lg shadow-lg"
+      />
+    </div>
+  </section>
+</Layout>
