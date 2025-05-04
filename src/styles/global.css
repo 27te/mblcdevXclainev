@@ -1,10 +1,5 @@
 @import "tailwindcss";
-
-@font-face {
-  font-family: Nanum;
-  font-size: 100 900;  
-  src: url("../assets/fonts/nanum.ttf") format("truetype");
-}
+@plugin "@midudev/tailwind-animations";
 
 @font-face {
   font-family: Inter;
@@ -19,6 +14,12 @@
  font-display: swap;
 }
 
+@font-face{
+  font-family: Display;
+  font-size:100 900;
+  src:url("../assets/fonts/display.ttf") format("truetype");
+}
+
 @theme{
   --font-nanum: "Nanum",sans-serif;
   --font-array: "Array",sans-serif;
@@ -26,9 +27,14 @@
   --color-primary:#6d9a7b;
   --color-secondary:#2e2e2e;
   --color-tertiary:#f2f0e3;
+  --color-quaternary:#f76f53;
   --color-clainev:#3EC988;
+  --radius-lg:0.75rem;
   --normal-cursor:url('/normal.cur'),auto;
   --pointer-cursor:url("/pointer.cur"),pointer;
+  --font-array:Array;
+  --font-sans:Inter, system-ui, sans-serif;
+  --font-display:Display;
 }
 
 
