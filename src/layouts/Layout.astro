@@ -21,9 +21,7 @@ const { title } = Astro.props;
   </head>
   <body class="bg-tertiary">
     <Navbar />
-    <main class="w-full md:w-[70%] mx-auto text-secondary">
-      <slot />
-    </main>
+    <slot />
     <LanguagePicker />
     <Footer />
   </body>
