@@ -7,14 +7,14 @@ interface Props {
 const { className, text, title } = Astro.props;
 ---
 
-<div class={`overflow-hidden w-full p-4 ${className}`}>
+<div class={`w-full p-4 ${className}`}>
   <div>
     <slot name="icon" />
   </div>
-  <h3 class="text-xl font-inter font-bold uppercase text-title">
+  <h3 class="text-xl font-inter font-semibold">
     {title}
   </h3>
-  <p class="font-inter text-base text-subtitle">
+  <p class="text-base font-medium text-secondary/70">
     {text}
   </p>
 </div>
