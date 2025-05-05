@@ -29,12 +29,17 @@ const { title } = Astro.props;
 
 <script>
   import Lenis from "lenis";
-  const lenis = new Lenis({
-    autoRaf: true,
-  });
 
-  lenis.on("scroll", (e) => {});
+  const lenis = new Lenis();
+
+  function raf(time: number) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
 </script>
+
 <script type="text/javascript">
   (function (C, A, L) {
     let p = function (a, ar) {
@@ -81,6 +86,7 @@ const { title } = Astro.props;
   html {
     scroll-behavior: smooth;
     cursor: var(--normal-cursor);
+    user-select: none;
   }
   a,
   button,
