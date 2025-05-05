@@ -4,7 +4,8 @@
 @font-face {
   font-family: Inter;
   font-size: 100 900;  
-  src: url("../assets/fonts/inter.ttf") format("truetype");
+  src: url("../assets/fonts/inter.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -17,13 +18,11 @@
 @font-face{
   font-family: Display;
   font-size:100 900;
-  src:url("../assets/fonts/display.ttf") format("truetype");
+  src:url("../assets/fonts/display.woff2") format("woff2");
+  font-display: swap;
 }
 
 @theme{
-  --font-nanum: "Nanum",sans-serif;
-  --font-array: "Array",sans-serif;
-  --font-inter: "Inter",sans-serif;
   --color-primary:#6d9a7b;
   --color-secondary:#2e2e2e;
   --color-tertiary:#f2f0e3;
