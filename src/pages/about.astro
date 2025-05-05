@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Sobre Mí">
   <main
-    class="max-w-[90ch] mx-auto px-4 mt-20 flex flex-col md:flex-row gap-2 justify-center"
+    class="w-full md:w-[70%] mx-auto px-4 mt-40 flex flex-col lg:flex-row gap-2 justify-center"
   >
     <section class="flex flex-col mb-5">
       <div class="flex md:block items-center gap-4">
@@ -22,6 +22,8 @@ import Layout from "../layouts/Layout.astro";
             src="/image.jpg"
             alt="antonio-perfil"
             draggable="false"
+            loading="lazy"
+            decoding="async"
             class="rounded-full size-20 md:size-44 object-cover aspect-square"
           />
           <div
