@@ -23,6 +23,9 @@ const { title, area, time, views, desktop }: Props = Astro.props;
     <img
       src={desktop}
       alt="test"
+      loading="lazy"
+      decoding="async"
+      title={title}
       class="h-full aspect-auto cursor-grab mix-blend-multiply"
       draggable="false"
     />

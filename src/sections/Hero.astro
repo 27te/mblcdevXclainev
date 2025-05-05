@@ -34,13 +34,16 @@ const lang = getLangFromUrl(Astro.url);
   >
     <div class="flex justify-center items-center flex-col">
       <h1
-        class="tracking-wide font-display text-5xl md:text-7xl lg:text-9xl text-center text-balance antialiased"
+        id="title"
+        class="blur-reveal tracking-wide font-display text-5xl md:text-7xl lg:text-9xl text-center text-balance antialiased"
       >
-        {data[lang].title}<span class="text-primary">
-          {data[lang].titleWord}</span
-        >
+        {data[lang].title}
+        <span class="text-primary"> {data[lang].titleWord}</span>
       </h1>
-      <p class="max-w-xl mt-5 text-center text-base font-medium antialiased">
+      <p
+        id="subtitle"
+        class="blur-reveal max-w-xl mt-5 text-center text-base font-medium antialiased text"
+      >
         {data[lang].text}
       </p>
     </div>
@@ -50,13 +53,13 @@ const lang = getLangFromUrl(Astro.url);
           data-cal-link="mblcdev/15min"
           data-cal-namespace="15min"
           data-cal-config='{"layout":"month_view"}'
-          class="hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 bg-quaternary text-tertiary overflow-hidden font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
+          class="button-blur-reveal hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 bg-quaternary text-tertiary overflow-hidden font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
         >
           {data[lang].btnOne}
         </button>
         <a
           href="#services"
-          class="hover:scale-[1.02] active:scale-[0.98] text-center overflow-hidden px-8 py-4 bg-secondary text-tertiary font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
+          class="button-blur-reveal hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 overflow-hidden bg-secondary text-tertiary font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
         >
           {data[lang].btnTwo}
         </a>
@@ -64,3 +67,45 @@ const lang = getLangFromUrl(Astro.url);
     </div>
   </div>
 </section>
+<style>
+  .blur-reveal {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .button-blur-reveal {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+</style>
+<script>
+  import { gsap } from "gsap";
+
+  window.addEventListener("DOMContentLoaded", () => {
+    gsap.to("#title", {
+      duration: 1.5,
+      opacity: 1,
+      filter: "blur(0px)",
+      y: 0,
+      ease: "power3.out",
+      delay: 0.2,
+    });
+    gsap.to("#subtitle", {
+      duration: 1.7,
+      opacity: 1,
+      filter: "blur(0px)",
+      y: 0,
+      ease: "power3.out",
+      delay: 0.4,
+    });
+    gsap.to(".button-blur-reveal", {
+      duration: 1.8,
+      opacity: 1,
+      filter: "blur(0px)",
+      y: 0,
+      ease: "power3.out",
+      delay: 0.6,
+    });
+  });
+</script>
