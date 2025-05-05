@@ -25,7 +25,7 @@
 @theme{
   --color-primary:#6d9a7b;
   --color-secondary:#2e2e2e;
-  --color-tertiary:#f2f0e3;
+  --color-tertiary:#faf4ed;
   --color-quaternary:#f76f53;
   --color-clainev:#3EC988;
   --radius-lg:0.75rem;
@@ -35,5 +35,5 @@
   --font-sans:Inter, system-ui, sans-serif;
   --font-display:Display;
 }
-
+/* #f2f0e3 */
 
