@@ -1,79 +1,291 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import {
+  Clock3,
+  TrendingUp,
+  Package,
+  Layers,
+  Users,
+  BadgeCheck,
+} from "@lucide/astro";
+
+const data = [
+  {
+    title: "Time Efficiency",
+    text: "Reduce time spent on inventory management by up to 75% with automated tracking abd alerts.",
+    icon: Clock3,
+  },
+  {
+    title: "Increased Accuracy",
+    text: "Minimize human error and maintain 99.9% accuracy in stock counts and order fulfillment.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Stock Optimization",
+    text: "Prevent overstocking and stockouts with intelligent inventory forecasting and analytics.",
+    icon: Package,
+  },
+  {
+    title: "Centralized Management",
+    text: "Manage multiple locations, warehouses, and stores from a single unified dashboard.",
+    icon: Layers,
+  },
+  {
+    title: "Team Collaboration",
+    text: "Enable seamless communication between departments with role-based access and notifications.",
+    icon: Users,
+  },
+  {
+    title: "Compliance Ready",
+    text: "Stray audit-ready with comprehensive inventory records and automated compliance reporting.",
+    icon: BadgeCheck,
+  },
+];
 ---
 
 <Layout title="Mb Inventory | Sistema de manejo de inventario para empresas">
-  <section class="min-h-screen flex justify-center flex-col items-center">
-    <div class="flex justify-center items-center flex-col mb-10 h-[50vh]">
-      <h1
-        class="tracking-wide font-display text-5xl md:text-7xl lg:text-9xl text-center text-balance antialiased"
-      >
-        MB <span class="text-primary">INVENTORY</span>
-      </h1>
-      <p class="max-w-xl mt-5 text-center text-base font-medium antialiased">
-        Sistema de manejo de inventario para empresas
-      </p>
-      <ul class="flex justify-center items-center gap-2 mt-10">
-        <li class="flex items-center gap-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6 text-primary"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+  <main class="mt-40 w-full md:w-[70%] px-4 mx-auto">
+    <section class="flex justify-center flex-col items-center">
+      <div class="flex justify-center items-center gap-5 flex-col mb-10">
+        <h1
+          class="tracking-wide font-display text-5xl md:text-7xl lg:text-9xl text-center text-balance antialiased"
+        >
+          MB <span class="text-primary">INVENTORY</span>
+        </h1>
+        <p class="max-w-xl text-center text-base font-medium antialiased">
+          Sistema de manejo de inventario para empresas
+        </p>
+        <div class="flex gap-5">
+          <a
+            href="#"
+            class="bg-quaternary text-tertiary px-8 py-4 rounded-lg shadow-lg font-medium hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 antialiased"
+            >Get Started Now</a
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 13l4 4L19 7"></path>
-          </svg>
-          <span class="text-base font-medium"
-            >Control total de tu inventario.</span
+          <a
+            href="#"
+            class="bg-secondary text-tertiary px-8 py-4 rounded-lg shadow-lg font-medium hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 antialiased"
+            >Watch Demo</a
           >
-        </li>
-        <li class="flex items-center gap-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6 text-primary"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 13l4 4L19 7"></path>
-          </svg>
-          <span class="text-base font-medium">Reportes detallados.</span>
-        </li>
-        <li class="flex items-center gap-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6 text-primary"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 13l4 4L19 7"></path>
-          </svg>
-          <span class="text-base font-medium"
-            >Alertas automáticas de stock bajo</span
-          >
-        </li>
-      </ul>
-    </div>
-    <div>
-      <img
-        src="/prod.png"
-        alt="inventory"
-        class="mix-blend-multiply border border-secondary/10 rounded-lg shadow-lg"
-      />
-    </div>
-  </section>
+        </div>
+      </div>
+      <div>
+        <img
+          src="/prod.png"
+          alt="inventory"
+          loading="lazy"
+          draggable="false"
+          class="mix-blend-multiply border border-secondary/10 rounded-lg shadow-lg"
+        />
+      </div>
+    </section>
+    <section class="mt-20 px-4">
+      <div>
+        <h2 class="font-display text-5xl font-bold uppercase text-center">
+          Key Advantages
+        </h2>
+        <p class="text-center text-base font-medium mt-5">
+          Our inventory management system provides powerful capabilities that
+          transform how businesses manage their stock.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        {
+          data.map(({ title, text, icon: Icon }) => {
+            return (
+              <div class="flex flex-col gap-2 border border-primary/20 p-2 rounded-lg">
+                <Icon class="size-10 text-quaternary" />
+                <h3 class="text-xl font-bold">{title}</h3>
+                <p class="text-base font-medium text-secondary/80">{text}</p>
+              </div>
+            );
+          })
+        }
+      </div>
+    </section>
+    <section class="mt-20 px-4">
+      <div>
+        <h2 class="font-display text-5xl font-bold uppercase text-center">
+          Use Cases
+        </h2>
+        <p class="text-center text-base font-medium mt-5">
+          Our inventory system adapts to various industries with specialized
+          features for each business type.
+        </p>
+      </div>
+      <div class="flex flex-col mt-10 gap-4 justify-center">
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <div class="flex justify-start items-start gap-4">
+            <button
+              id="retail-btn"
+              class="text-lg font-semibold text-nowrap bg-secondary/5 px-4 py-2 rounded-lg"
+              >Retail</button
+            >
+            <button
+              id="wholesale-btn"
+              class="text-lg font-semibold text-nowrap hover:bg-secondary/5 px-4 py-2 rounded-lg"
+              >Wholesale</button
+            >
+            <button
+              id="e-commerce-btn"
+              class="text-lg font-semibold text-nowrap hover:bg-secondary/5 px-4 py-2 rounded-lg"
+              >E-Commerce</button
+            >
+            <button
+              id="apparel-btn"
+              class="text-lg font-semibold text-nowrap hover:bg-secondary/5 px-4 py-2 rounded-lg"
+              >Apparel & Fashion</button
+            >
+          </div>
+          <div class="flex px-4 justify-center max-w-xl">
+            <div
+              id="retail"
+              class="text-sm text-secondary/80 font-medium w-full animate-slide-in-bottom delay-300"
+            >
+              RLorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              necessitatibus minima, inventore quo fugiat iusto error rem
+              aspernatur.
+            </div>
+
+            <div
+              id="wholesale"
+              class="text-sm text-secondary/80 font-medium hidden animate-slide-in-bottom delay-300"
+            >
+              WLorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              labore dolorem eligendi beatae praesentium magnam quis suscipit
+              maxime.
+            </div>
+
+            <div
+              id="e-commerce"
+              class="text-sm text-secondary/80 font-medium hidden animate-slide-in-bottom delay-300"
+            >
+              ELorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              cupiditate doloribus libero porro unde natus? Iusto earum saepe
+              sapiente.
+            </div>
+            <div
+              id="apparel"
+              class="text-sm text-secondary/80 font-medium hidden animate-slide-in-bottom delay-300"
+            >
+              ALorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+              dolorem id.
+            </div>
+          </div>
+        </div>
+        <div class="relative h-96 flex justify-center">
+          <img
+            src="/image.jpg"
+            alt="xd"
+            id="retail-image"
+            class="rounded-lg shadow-lg mix-blend-multiply absolute h-96 animate-slide-in-bottom delay-300"
+          />
+          <img
+            src="/forest.webp"
+            alt="xd"
+            id="wholesale-image"
+            class="rounded-lg shadow-lg mix-blend-multiply absolute h-96 hidden animate-slide-in-bottom delay-300"
+          />
+          <img
+            src="/madroyer-desktop.png"
+            alt="xd"
+            id="e-commerce-image"
+            class="rounded-lg shadow-lg mix-blend-multiply absolute h-96 hidden animate-slide-in-bottom delay-300"
+          />
+          <img
+            src="/web.png"
+            alt="xd"
+            id="apparel-image"
+            class="rounded-lg shadow-lg mix-blend-multiply absolute h-96 hidden animate-slide-in-bottom delay-300"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
+<script>
+  const btnReatil = document.getElementById("retail-btn") as HTMLButtonElement;
+  const btnWholesale = document.getElementById(
+    "wholesale-btn"
+  ) as HTMLButtonElement;
+  const btnEcommerce = document.getElementById(
+    "e-commerce-btn"
+  ) as HTMLButtonElement;
+  const btnApparel = document.getElementById(
+    "apparel-btn"
+  ) as HTMLButtonElement;
+
+  const retail = document.getElementById("retail") as HTMLElement;
+  const wholesale = document.getElementById("wholesale") as HTMLElement;
+  const ecomerce = document.getElementById("e-commerce") as HTMLElement;
+  const apparel = document.getElementById("apparel") as HTMLElement;
+
+  const retailImage = document.getElementById(
+    "retail-image"
+  ) as HTMLImageElement;
+  const wholesaleImage = document.getElementById(
+    "wholesale-image"
+  ) as HTMLImageElement;
+  const ecomerceImage = document.getElementById(
+    "e-commerce-image"
+  ) as HTMLImageElement;
+  const apparelImage = document.getElementById(
+    "apparel-image"
+  ) as HTMLImageElement;
+
+  btnReatil.addEventListener("click", () => {
+    retail.classList.remove("hidden");
+    wholesale.classList.add("hidden");
+    ecomerce.classList.add("hidden");
+    apparel.classList.add("hidden");
+    retailImage.classList.remove("hidden");
+    wholesaleImage.classList.add("hidden");
+    ecomerceImage.classList.add("hidden");
+    apparelImage.classList.add("hidden");
+    btnReatil.classList.add("bg-secondary/5");
+    btnWholesale.classList.remove("bg-secondary/5");
+    btnEcommerce.classList.remove("bg-secondary/5");
+    btnApparel.classList.remove("bg-secondary/5");
+  });
+  btnWholesale.addEventListener("click", () => {
+    retail.classList.add("hidden");
+    wholesale.classList.remove("hidden");
+    ecomerce.classList.add("hidden");
+    apparel.classList.add("hidden");
+    retailImage.classList.add("hidden");
+    wholesaleImage.classList.remove("hidden");
+    ecomerceImage.classList.add("hidden");
+    apparelImage.classList.add("hidden");
+    btnReatil.classList.remove("bg-secondary/5");
+    btnWholesale.classList.add("bg-secondary/5");
+    btnEcommerce.classList.remove("bg-secondary/5");
+    btnApparel.classList.remove("bg-secondary/5");
+  });
+  btnEcommerce.addEventListener("click", () => {
+    retail.classList.add("hidden");
+    wholesale.classList.add("hidden");
+    ecomerce.classList.remove("hidden");
+    apparel.classList.add("hidden");
+    retailImage.classList.add("hidden");
+    wholesaleImage.classList.add("hidden");
+    ecomerceImage.classList.remove("hidden");
+    apparelImage.classList.add("hidden");
+    btnReatil.classList.remove("bg-secondary/5");
+    btnWholesale.classList.remove("bg-secondary/5");
+    btnEcommerce.classList.add("bg-secondary/5");
+    btnApparel.classList.remove("bg-secondary/5");
+  });
+  btnApparel.addEventListener("click", () => {
+    retail.classList.add("hidden");
+    wholesale.classList.add("hidden");
+    ecomerce.classList.add("hidden");
+    apparel.classList.remove("hidden");
+    retailImage.classList.add("hidden");
+    wholesaleImage.classList.add("hidden");
+    ecomerceImage.classList.add("hidden");
+    apparelImage.classList.remove("hidden");
+    btnReatil.classList.remove("bg-secondary/5");
+    btnWholesale.classList.remove("bg-secondary/5");
+    btnEcommerce.classList.remove("bg-secondary/5");
+    btnApparel.classList.add("bg-secondary/5");
+  });
+</script>
