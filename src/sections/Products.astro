@@ -1,5 +1,14 @@
 ---
 import { ArrowRightIcon } from "@lucide/astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <div>
@@ -21,7 +30,7 @@ import { ArrowRightIcon } from "@lucide/astro";
         >
       </h3>
       <a
-        href="/products/mb-inventory"
+        href={translatePath("/products/mb-inventory")}
         class="bg-secondary rounded-lg px-8 py-4 text-base font-medium font-inter flex gap-x-2 justify-center items-center text-tertiary hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 transform-gpu shadow-lg"
       >
         <span> Try it now </span>
