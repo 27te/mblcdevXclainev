@@ -4,6 +4,7 @@ import { getLangFromUrl, useTranslatedPath } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const translatedPath = useTranslatedPath(lang);
+const currentPath = Astro.url.pathname.replace(`/${lang}/`, '/');
 ---
 
 <ul
@@ -13,7 +14,7 @@ const translatedPath = useTranslatedPath(lang);
     Object.entries(languages).map(([langKey, label]) => (
       <li class="transition-all duration-300">
         <a
-          href={translatedPath("/", langKey)}
+          href={translatedPath(currentPath, langKey)}
           class={`${(lang === "en" && langKey === "es") || (lang === "es" && langKey === "en") ? "block" : "hidden"}`}
         >
           {(lang === "en" && langKey === "es") ||
