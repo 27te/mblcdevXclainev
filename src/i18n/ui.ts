@@ -16,6 +16,7 @@ export const ui = {
     "contact.text":
       "Comienza tu crecimiento digital ahora. Con nosotros, crece tu marca y alcanza el siguiente nivel.",
     "contact.button": "✨Copiado al portapapeles.✨",
+    "product.button": "Probar Ahora",
   },
   en: {
     "nav.home": "Home",
@@ -27,6 +28,7 @@ export const ui = {
     "contact.text":
       "Start your digital growth now. With us, grow your brand and reach the next level.",
     "contact.button": "✨Copied to clipboard.✨",
+    "product.button": "Try Now",
   },
 } as const;
 
