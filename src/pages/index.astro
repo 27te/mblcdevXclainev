@@ -18,13 +18,7 @@ const services = await import(`../data/service.${lang}.json`);
   <Hero />
   <main class="w-full md:w-[70%] mx-auto text-secondary">
     <section class="container mx-auto px-4 mt-10">
-      <SectionHeader title="Trabajos Recientes">
-        <span
-          class="absolute top-5 left-[60%] rotate-6 text-2xl font-medium text-tertiary"
-        >
-          Año {new Date().getFullYear()}
-        </span>
-      </SectionHeader>
+      <SectionHeader title="Trabajos Recientes" />
       <div class="space-y-20">
         <Works
           title="Mad Exhibitions"
@@ -43,43 +37,19 @@ const services = await import(`../data/service.${lang}.json`);
       </div>
     </section>
     <section class="px-4 mt-20">
-      <SectionHeader title="Productos">
-        <span
-          class="absolute top-5 left-[60%] rotate-6 text-2xl font-medium text-tertiary"
-        >
-          Crecimiento
-        </span>
-      </SectionHeader>
+      <SectionHeader title="Productos" />
       <Products />
     </section>
     <section class="px-4 mt-20 scroll-my-24" id="services">
-      <SectionHeader title="Servicios">
-        <span
-          class="absolute top-5 left-[60%] rotate-6 text-2xl font-medium text-tertiary"
-        >
-          Vamos, joder
-        </span>
-      </SectionHeader>
+      <SectionHeader title="Servicios" />
       <Services item={services.default} />
     </section>
     <section class="container mx-auto px-4 mt-20">
-      <SectionHeader title="Preguntas Frecuentes">
-        <span
-          class="absolute top-5 left-[60%] rotate-6 text-2xl font-medium text-tertiary"
-        >
-          como empezamos
-        </span>
-      </SectionHeader>
+      <SectionHeader title="Preguntas Frecuentes" />
       <Faq item={faq.default} />
     </section>
     <section class="container mx-auto px-4 mt-20">
-      <SectionHeader title="Trabajemos Juntos">
-        <span
-          class="absolute top-5 left-[60%] rotate-6 text-2xl font-medium text-tertiary"
-        >
-          contactar ahora
-        </span>
-      </SectionHeader>
+      <SectionHeader title="Trabajemos Juntos" />
       <Contact />
     </section>
   </main>
