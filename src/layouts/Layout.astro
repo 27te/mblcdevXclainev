@@ -4,7 +4,7 @@ import Navbar from "../components/ui/Navbar.astro";
 import { getLangFromUrl } from "../i18n/utils";
 import Footer from "../sections/Footer.astro";
 import LanguagePicker from "../components/ui/LanguagePicker.astro";
-
+import SEO from "../components/SEO.astro";
 interface Props {
   title: string;
 }
@@ -15,9 +15,7 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang={lang}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <SEO title={title} />
   </head>
   <body class="bg-tertiary">
     <Navbar />
