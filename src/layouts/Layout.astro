@@ -7,15 +7,16 @@ import LanguagePicker from "../components/ui/LanguagePicker.astro";
 import SEO from "../components/SEO.astro";
 interface Props {
   title: string;
+  description: string;
 }
 const lang = getLangFromUrl(Astro.url);
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
-    <SEO title={title} />
+    <SEO title={title} description={description} />
   </head>
   <body class="bg-tertiary">
     <Navbar />
