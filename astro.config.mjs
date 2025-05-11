@@ -11,5 +11,13 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site:'https://mblcdev.com',
-  integrations: [sitemap()]
+  integrations: [sitemap({
+    i18n:{
+      defaultLocale:'es',
+      locales:{
+        es:'es-PE',
+        en: 'en-US',
+      }
+    }
+  })]
 });
