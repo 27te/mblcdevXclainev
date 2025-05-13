@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+
+const pageTitle = "My other person";
+const allPosts = await getCollection("diary");
+const allPostsFiltered = allPosts.filter((post) => {
+  const isNotDraft = post.data.draft === true;
+  const isSpanishContent = post.id.startsWith("en/");
+  const hasValidSlug = post.slug.includes("en/");
+
+  return isNotDraft && isSpanishContent && hasValidSlug;
+});
+console.log(allPostsFiltered);
+---
+
+<Layout title={pageTitle} description={pageTitle}>
+  <ul>
+    {
+      allPostsFiltered.map((post) => (
+        <li>
+          <a href={`${post.slug}`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
