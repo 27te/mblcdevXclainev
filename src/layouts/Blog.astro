@@ -1,0 +1,225 @@
+---
+import Layout from "./Layout.astro";
+
+interface Props {
+  title: string;
+  date?: string;
+  author?: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, date, author, description, image } = Astro.props;
+---
+
+<Layout title={title} description={description || ""}>
+  <article class="blog-post">
+    {
+      image && (
+        <div class="cover-image">
+          <img src={image} alt={title} />
+        </div>
+      )
+    }
+
+    <div class="content">
+      <header>
+        <h1>{title}</h1>
+        <div class="metadata">
+          {date && <time>{date}</time>}
+          {author && <span class="author">By {author}</span>}
+        </div>
+        {description && <p class="description">{description}</p>}
+      </header>
+
+      <div class="post-content">
+        <slot />
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  /* Base styles */
+  :root {
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f7fafc;
+    --accent-color: #4299e1;
+    --code-bg: #edf2f7;
+  }
+
+  /* Article container */
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--bg-primary);
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
+    line-height: 1.7;
+    color: var(--text-primary);
+  }
+
+  /* Headers */
+  .blog-post :global(h1) {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 2rem 0 1.5rem;
+    line-height: 1.2;
+  }
+
+  .blog-post :global(h2) {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+  }
+
+  .blog-post :global(h3) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .blog-post :global(h4) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+  }
+
+  /* Paragraphs and text */
+  .blog-post :global(p) {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  .blog-post :global(strong) {
+    font-weight: 600;
+  }
+
+  .blog-post :global(em) {
+    font-style: italic;
+  }
+
+  /* Lists */
+  .blog-post :global(ul),
+  .blog-post :global(ol) {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+
+  .blog-post :global(li) {
+    margin: 0.5rem 0;
+  }
+
+  /* Code blocks */
+  .blog-post :global(pre) {
+    background: var(--code-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+  }
+
+  .blog-post :global(code) {
+    background: var(--code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95em;
+  }
+
+  /* Keyboard shortcuts */
+  .blog-post :global(kbd) {
+    background: var(--bg-secondary);
+    border: 1px solid #cbd5e0;
+    border-radius: 0.25rem;
+    padding: 0.2em 0.4em;
+    font-family: -apple-system, sans-serif;
+    font-size: 0.9em;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Blockquotes */
+  .blog-post :global(blockquote) {
+    border-left: 4px solid var(--accent-color);
+    margin: 1.5rem 0;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+
+  /* Links */
+  .blog-post :global(a) {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .blog-post :global(a:hover) {
+    border-bottom-color: var(--accent-color);
+  }
+
+  /* Tables */
+  .blog-post :global(table) {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+  }
+
+  .blog-post :global(th),
+  .blog-post :global(td) {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+  }
+
+  .blog-post :global(th) {
+    background: var(--bg-secondary);
+    font-weight: 600;
+  }
+
+  /* Images */
+  .blog-post :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  /* Horizontal rule */
+  .blog-post :global(hr) {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 2rem 0;
+  }
+
+  /* Selection */
+  .blog-post :global(::selection) {
+    background: var(--accent-color);
+    color: white;
+  }
+
+  /* Metadata styles */
+  .metadata {
+    display: flex;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+</style>
