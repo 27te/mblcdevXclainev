@@ -13,7 +13,7 @@ const { title, date, author, description, image } = Astro.props;
 ---
 
 <Layout title={title} description={description || ""}>
-  <article class="blog-post mt-40">
+  <article class="blog-post mt-40 max-w-[80ch] mx-auto">
     {
       image && (
         <div class="cover-image">
