@@ -57,17 +57,19 @@ const translatePath = useTranslatedPath(lang);
           </li>
           <li>
             <a
-              href="/blog"
+              href={translatePath("/blog/")}
               class="text-tertiary transition-colors duration-200 hover:bg-tertiary hover:text-secondary w-full block rounded-lg p-3"
-              >blog</a
             >
+              {t("nav.blog")}
+            </a>
           </li>
           <li>
             <a
-              href="/diary"
+              href={translatePath("/diary/")}
               class="text-tertiary transition-colors duration-200 hover:bg-tertiary hover:text-secondary w-full block rounded-lg p-3"
-              >diary</a
             >
+              {t("nav.diary")}
+            </a>
           </li>
         </ul>
       </div>
