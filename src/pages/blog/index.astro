@@ -16,13 +16,15 @@ console.log(allPostsFiltered);
 ---
 
 <Layout title={pageTitle} description={pageTitle}>
-  <ul>
-    {
-      allPostsFiltered.map((post) => (
-        <li>
-          <a href={`${post.slug}`}>{post.data.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <main class="max-w-[80ch]">
+    <ul>
+      {
+        allPostsFiltered.map((post) => (
+          <li>
+            <a href={`${post.slug}`}>{post.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
 </Layout>
