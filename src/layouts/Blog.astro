@@ -1,5 +1,6 @@
 ---
 import Layout from "./Layout.astro";
+import "../styles/blog.css";
 
 interface Props {
   title: string;
@@ -13,28 +14,7 @@ const { title, date, author, description, image } = Astro.props;
 ---
 
 <Layout title={title} description={description || ""}>
-  <article class="blog-post mt-40 max-w-[80ch] mx-auto">
-    {
-      image && (
-        <div class="cover-image">
-          <img src={image} alt={title} />
-        </div>
-      )
-    }
-
-    <div class="content">
-      <header>
-        <h1>{title}</h1>
-        <div class="metadata">
-          {date && <time>{date}</time>}
-          {author && <span class="author">By {author}</span>}
-        </div>
-        {description && <p class="description">{description}</p>}
-      </header>
-
-      <div class="post-content">
-        <slot />
-      </div>
-    </div>
-  </article>
+  <main class="blog mt-40 max-w-[80ch] mx-auto px-4">
+    <slot />
+  </main>
 </Layout>
