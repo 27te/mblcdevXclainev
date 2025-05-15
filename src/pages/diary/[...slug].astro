@@ -15,6 +15,29 @@ const { Content } = await render(post);
 ---
 
 <Blog title={post.data.title} description={post.data.description}>
+  <div class="h-96 mb-8">
+    <img
+      src="/chapter-01.png"
+      alt="capitulo-01-portada"
+      class="size-full rounded-lg aspect-video object-cover shadow-lg"
+    />
+  </div>
   <h1>{post.data.title}</h1>
   <Content />
+  <div class="flex justify-between items-center flex-wrap mt-5">
+    <p class="font-semibold">
+      — {post.data.author}
+    </p>
+    <p class="font-semibold">
+      <time
+        >{
+          post.data.pubDate.toLocaleDateString("es-PE", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }</time
+      >
+    </p>
+  </div>
 </Blog>

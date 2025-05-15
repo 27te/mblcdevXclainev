@@ -15,12 +15,12 @@ console.log(allPostsFiltered);
 ---
 
 <Layout title={pageTitle} description={pageTitle}>
-  <main class="max-w-[80ch] mt-40 mx-auto">
+  <main class="max-w-[80ch] mt-40 mx-auto px-4">
     <ul>
       {
         allPostsFiltered.map((post) => (
           <li>
-            <a href={`${post.slug}`}>{post.data.title}</a>
+            <a href={`diary/${post.slug}`}>{post.data.title}</a>
           </li>
         ))
       }
