@@ -1,31 +1,14 @@
 ---
-import { LayoutTemplate, Settings, ShoppingBag, Shield } from "@lucide/astro";
-import Box from "../components/ui/Box.astro";
+import SectionHeader from "../components/ui/SectionHeader.astro";
+import Service from "../components/Service.astro";
+import { getLangFromUrl } from "../i18n/utils";
 
-const { item } = Astro.props;
-
-const iconMap = {
-  LayoutTemplate,
-  Settings,
-  ShoppingBag,
-  Shield,
-};
+const lang = getLangFromUrl(Astro.url);
+const services = await import(`../data/service.${lang}.json`);
+const sectionTitle = lang === "es" ? "Servicios" : "Services";
 ---
 
-<div>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-    {
-      item?.map((service: any) => {
-        const Icon = iconMap[service.icon as keyof typeof iconMap];
-
-        return (
-          <Box title={service.title} text={service.description}>
-            <div slot="icon" class="inline-block">
-              <Icon class="text-quaternary size-8" />
-            </div>
-          </Box>
-        );
-      })
-    }
-  </div>
-</div>
+<section class="px-4 mt-20 scroll-my-24" id="services">
+  <SectionHeader title={sectionTitle} />
+  <Service item={services.default} />
+</section>

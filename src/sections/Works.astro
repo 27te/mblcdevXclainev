@@ -1,75 +1,37 @@
 ---
-import { TrendingUp } from "@lucide/astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Work from "../components/Work.astro";
+import SectionHeader from "../components/ui/SectionHeader.astro";
+import { getLangFromUrl } from "../i18n/utils";
 
-interface Props {
+interface Work {
   title: string;
   area: string;
   time: string;
   views: string;
-  desktop: string;
   url: string;
+  desktop: string;
 }
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const { title, area, time, views, desktop, url }: Props = Astro.props;
+const data = await import(`../data/work.${lang}.json`);
+const works = data.default;
+const sectionTitle = lang === "es" ? "Trabajos Recientes" : "Recent Works";
 ---
 
-<section class="container mx-auto">
-  <div
-    class="flex justify-center items-center rounded-lg shadow-lg overflow-hidden"
-  >
-    <img
-      src={desktop}
-      alt="test"
-      loading="lazy"
-      decoding="async"
-      title={title}
-      class="h-full aspect-auto cursor-grab mix-blend-multiply"
-      draggable="false"
-    />
-  </div>
-  <div
-    class="flex flex-col md:flex-row justify-between items-center gap-5 w-full px-5 py-5"
-  >
-    <div class="flex justify-start">
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-2xl font-bold text-center text-secondary hover:underline"
-      >
-        {title}
-      </a>
-    </div>
-    <div class="flex justify-center flex-wrap">
-      <ul class="flex justify-center items-center gap-5">
-        <li class="flex flex-col font-inter">
-          <span class="text-secondary/70 text-sm font-medium"
-            >{t("work.area")}</span
-          >
-          <p class="text-base font-medium">{area}</p>
-        </li>
-        <li class="flex flex-col font-inter">
-          <span class="text-secondary/70 text-sm font-medium"
-            >{t("work.time")}</span
-          >
-          <p class="text-base font-medium">{time}</p>
-        </li>
-        <li class="flex flex-col font-inter">
-          <span class="text-secondary/70 text-sm font-medium"
-            >{t("work.views")}</span
-          >
-          <p
-            class="text-base font-medium flex justify-center items-center gap-1"
-          >
-            {views}
-            <TrendingUp class="text-quaternary" />
-          </p>
-        </li>
-      </ul>
-    </div>
+<section class="container mx-auto px-4 mt-10">
+  <SectionHeader title={sectionTitle} />
+  <div class="space-y-20">
+    {
+      works.map(({ title, area, time, views, url, desktop }: Work) => (
+        <Work
+          title={title}
+          area={area}
+          time={time}
+          views={views}
+          url={url}
+          desktop={desktop}
+        />
+      ))
+    }
   </div>
 </section>

@@ -1,12 +1,14 @@
 ---
-import Product from "../components/Product.astro";
+import Contact from "../components/Contact.astro";
 import SectionHeader from "../components/ui/SectionHeader.astro";
 import { getLangFromUrl } from "../i18n/utils";
+
 const lang = getLangFromUrl(Astro.url);
-const sectionTitle = lang === "es" ? "Productos" : "Products";
+const sectionTitle =
+  lang === "es" ? "Trabajemos Juntos" : "Let's Work Together";
 ---
 
-<section class="px-4 mt-20">
+<section class="container mx-auto px-4 mt-20">
   <SectionHeader title={sectionTitle} />
-  <Product />
+  <Contact />
 </section>

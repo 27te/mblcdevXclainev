@@ -1,0 +1,14 @@
+---
+import SectionHeader from "../components/ui/SectionHeader.astro";
+import Faq from "../components/Faq.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const faq = await import(`../data/faq.${lang}.json`);
+const sectionTitle = lang === "es" ? "Preguntas Frecuentes" : "FAQ";
+---
+
+<section class="container mx-auto px-4 mt-20">
+  <SectionHeader title={sectionTitle} />
+  <Faq item={faq.default} />
+</section>
