@@ -1,17 +1,11 @@
 ---
-import Contact from "../../sections/Contact.astro";
-import Faq from "../../sections/Faq.astro";
-import Hero from "../../sections/Hero.astro";
-import Services from "../../sections/Services.astro";
-import Works from "../../sections/Works.astro";
-import SectionHeader from "../../components/ui/SectionHeader.astro";
 import Layout from "../../layouts/Layout.astro";
+import Hero from "../../sections/Hero.astro";
+import Works from "../../sections/Works.astro";
+import Services from "../../sections/Services.astro";
+import Faqs from "../../sections/Faqs.astro";
+import Contacts from "../../sections/Contacts.astro";
 import Products from "../../sections/Products.astro";
-import { getLangFromUrl } from "../../i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const faq = await import(`../../data/faq.${lang}.json`);
-const services = await import(`../../data/service.${lang}.json`);
 ---
 
 <Layout
@@ -20,42 +14,15 @@ const services = await import(`../../data/service.${lang}.json`);
 >
   <Hero />
   <main class="w-full md:w-[70%] mx-auto text-secondary">
-    <section class="container mx-auto px-4">
-      <SectionHeader title="Latest Works" />
-      <div class="space-y-20">
-        <Works
-          title="Mad Exhibitions"
-          area="Art & Music"
-          time="1 week"
-          views="280"
-          url="https://madexhibitions.com"
-          desktop="/madexhibition-desktop.webp"
-        />
-        <Works
-          title="Mad Royer"
-          area="Art"
-          time="1 week"
-          views="1k"
-          url="https://madroyer.com"
-          desktop="/madroyer-desktop.webp"
-        />
-      </div>
-    </section>
-    <section class="px-4 mt-20">
-      <SectionHeader title="Products" />
-      <Products />
-    </section>
-    <section class="px-4 mt-20 scroll-my-24" id="services">
-      <SectionHeader title="Services" />
-      <Services item={services.default} />
-    </section>
-    <section class="container mx-auto px-4 mt-20">
-      <SectionHeader title="Faq" />
-      <Faq item={faq.default} />
-    </section>
-    <section class="container mx-auto px-4 mt-20">
-      <SectionHeader title="Let's work together" />
-      <Contact />
-    </section>
+    <!-- Works -->
+    <Works />
+    <!-- Products -->
+    <Products />
+    <!-- Services -->
+    <Services />
+    <!-- Faq -->
+    <Faqs />
+    <!-- Contact -->
+    <Contacts />
   </main>
 </Layout>

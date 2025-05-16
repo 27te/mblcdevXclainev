@@ -2,16 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../sections/Hero.astro";
 import Works from "../sections/Works.astro";
-import SectionHeader from "../components/ui/SectionHeader.astro";
 import Services from "../sections/Services.astro";
-import Faq from "../sections/Faq.astro";
-import Contact from "../sections/Contact.astro";
+import Faqs from "../sections/Faqs.astro";
+import Contacts from "../sections/Contacts.astro";
 import Products from "../sections/Products.astro";
-import { getLangFromUrl } from "../i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const faq = await import(`../data/faq.${lang}.json`);
-const services = await import(`../data/service.${lang}.json`);
 ---
 
 <Layout
@@ -20,42 +14,15 @@ const services = await import(`../data/service.${lang}.json`);
 >
   <Hero />
   <main class="w-full md:w-[70%] mx-auto text-secondary">
-    <section class="container mx-auto px-4 mt-10">
-      <SectionHeader title="Trabajos Recientes" />
-      <div class="space-y-20">
-        <Works
-          title="Mad Exhibitions"
-          area="Arte y Música"
-          time="1 semana"
-          views="280"
-          url="https://madexhibitions.com"
-          desktop="/madexhibition-desktop.webp"
-        />
-        <Works
-          title="Mad Royer"
-          area="Arte"
-          time="1 semana"
-          views="1k"
-          url="https://madroyer.com"
-          desktop="/madroyer-desktop.webp"
-        />
-      </div>
-    </section>
-    <section class="px-4 mt-20">
-      <SectionHeader title="Productos" />
-      <Products />
-    </section>
-    <section class="px-4 mt-20 scroll-my-24" id="services">
-      <SectionHeader title="Servicios" />
-      <Services item={services.default} />
-    </section>
-    <section class="container mx-auto px-4 mt-20">
-      <SectionHeader title="Preguntas Frecuentes" />
-      <Faq item={faq.default} />
-    </section>
-    <section class="container mx-auto px-4 mt-20">
-      <SectionHeader title="Trabajemos Juntos" />
-      <Contact />
-    </section>
+    <!-- Works -->
+    <Works />
+    <!-- Products -->
+    <Products />
+    <!-- Services -->
+    <Services />
+    <!-- Faq -->
+    <Faqs />
+    <!-- Contact -->
+    <Contacts />
   </main>
 </Layout>
