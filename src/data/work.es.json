@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Mad Exhibitions",
+    "area": "Arte & Música",
+    "time": "1 semana",
+    "views": "280",
+    "url": "https://madexhibitions.com",
+    "desktop": "/madexhibition-desktop.webp"
+  },
+  {
+    "id": 2,
+    "title": "Mad Royer",
+    "area": "Arte",
+    "time": "1 semana",
+    "views": "1k",
+    "url": "https://madroyer.com",
+    "desktop": "/madroyer-desktop.webp"
+  }
+]
