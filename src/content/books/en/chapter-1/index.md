@@ -3,7 +3,7 @@ title: "Chapter 1 - What it's like to live with a mind that never turns off"
 description: "An honest portrait of what it means to wake up every day with your mind buzzing, endlessly jumping between thoughts, to-dos, and ideas. This first chapter of The Diary of a Stranger in the Middle Ages narrates the invisible burden of overthinking, the internal struggle between productivity and creative freedom, and the desire to find silence amidst the noise."
 pubDate: 2025-05-13
 draft: true
-image: "/05.webp"
+image: "/chapter-01.png"
 author: "Sombra"
 language: "en"
 ---
