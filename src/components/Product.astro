@@ -1,0 +1,45 @@
+---
+import { ArrowRightIcon } from "@lucide/astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<div>
+  <div class="flex flex-col gap-4 justify-center items-center">
+    <div class="aspect-auto">
+      <img
+        src="/prod.webp"
+        alt="mb-inventory"
+        draggable="false"
+        loading="lazy"
+        decoding="async"
+        class="w-full h-full aspect-auto rounded-lg shadow-lg mix-blend-multiply"
+      />
+    </div>
+    <div
+      class="flex justify-between flex-col gap-5 md:flex-row items-center w-full px-5"
+    >
+      <h3 class="text-2xl font-bold relative">
+        MB INVENTORY <span class="text-quaternary text-sm top-0 absolute mx-1"
+          >v1</span
+        >
+      </h3>
+      <a
+        href={translatePath("/products/mb-inventory")}
+        class="bg-secondary rounded-lg px-8 py-4 text-base font-medium font-inter flex gap-x-2 justify-center items-center text-tertiary hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 transform-gpu shadow-lg"
+      >
+        <span> {t("product.button")} </span>
+        <span>
+          <ArrowRightIcon class="size-4" />
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

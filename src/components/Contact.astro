@@ -1,0 +1,73 @@
+---
+import { Instagram, Linkedin, Mail, Twitter } from "@lucide/astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="flex flex-col justify-center items-center gap-10">
+  <p class="text-base font-medium text-center">
+    {t("contact.text")}
+  </p>
+  <div class="flex justify-center items-center flex-col gap-2">
+    <button
+      class="relative flex justify-center items-center gap-1 overflow-hidden bg-secondary text-tertiary font-semibold text-lg rounded-[0.75rem] shadow-xl px-8 py-4 hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150 cursor-pointer"
+      id="contact"
+    >
+      <Mail />
+      antonio@mblcdev.com
+    </button>
+    <div class="h-5">
+      <p class="text-sm hidden text-accent" id="message">
+        {t("contact.button")}
+      </p>
+    </div>
+    <ul class="flex mt-3 justify-center items-center gap-4 font-medium">
+      <li>
+        <a
+          href="https://www.linkedin.com/in/mblcdev"
+          rel="noopener noreferrer"
+          target="_blank"
+          class="hover:scale-110 transition-transform duration-300 text-2xl uppercase shadow-xl bg-[#0077b5] text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
+        >
+          <Linkedin class="block text-tertiary" />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.instagram.com/mblc.dev"
+          rel="noopener noreferrer"
+          target="_blank"
+          class="hover:scale-110 transition-transform duration-300 text-2xl uppercase shadow-xl bg-gradient-to-l to-[#ff7a00] via-[#ff0069] from-[#7638fa] text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
+        >
+          <Instagram class="block text-tertiary" />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://x.com/mblc_dev"
+          rel="noopener noreferrer"
+          target="_blank"
+          class="hover:scale-110 transition-transform duration-300 text-2xl uppercase shadow-xl bg-black text-white font-bold px-3 py-3 rounded-full flex justify-center items-center"
+        >
+          <Twitter class="block text-tertiary" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const btncontact = document.querySelector("#contact");
+  const message = document.querySelector("#message");
+  btncontact?.addEventListener("click", () => {
+    navigator.clipboard.writeText(btncontact.textContent!);
+    message?.classList.remove("hidden");
+    setTimeout(() => {
+      message?.classList.add("hidden");
+    }, 2000);
+  });
+</script>
