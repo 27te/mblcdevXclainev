@@ -1,9 +1,9 @@
 ---
 import { getCollection, render } from "astro:content";
-import Blog from "../../layouts/Blog.astro";
+import Blog from "../../../layouts/Blog.astro";
 export const getStaticPaths = async () => {
-  const diary = await getCollection("diary");
-  const diaryFiltered = diary.filter((post) => post.id.startsWith("es/"));
+  const diary = await getCollection("books");
+  const diaryFiltered = diary.filter((post) => post.id.startsWith("en/"));
 
   return diaryFiltered.map((post) => ({
     params: { slug: post.slug },
@@ -17,8 +17,11 @@ const { Content } = await render(post);
 <Blog title={post.data.title} description={post.data.description}>
   <div class="h-96 mb-8">
     <img
-      src="/chapter-01.png"
-      alt="capitulo-01-portada"
+      src={post.data.image}
+      alt={post.data.title}
+      loading="lazy"
+      decoding="async"
+      draggable="false"
       class="size-full rounded-lg aspect-video object-cover shadow-lg"
     />
   </div>

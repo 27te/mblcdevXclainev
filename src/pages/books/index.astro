@@ -1,17 +1,16 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 
 const pageTitle = "My other person";
-const allPosts = await getCollection("diary");
+const allPosts = await getCollection("books");
 const allPostsFiltered = allPosts.filter((post) => {
   const isNotDraft = post.data.draft === true;
-  const isSpanishContent = post.id.startsWith("en/");
-  const hasValidSlug = post.slug.includes("en/");
+  const isSpanishContent = post.id.startsWith("es/");
+  const hasValidSlug = post.slug.includes("es/");
 
   return isNotDraft && isSpanishContent && hasValidSlug;
 });
-console.log(allPostsFiltered);
 ---
 
 <Layout title={pageTitle} description={pageTitle}>
@@ -20,7 +19,7 @@ console.log(allPostsFiltered);
       {
         allPostsFiltered.map((post) => (
           <li>
-            <a href={`diary/${post.slug}`}>{post.data.title}</a>
+            <a href={`${post.slug}`}>{post.data.title}</a>
           </li>
         ))
       }
