@@ -3,7 +3,7 @@ title: "Capítulo 1 — Cómo es vivir con una mente que nunca se apaga"
 description: "Un retrato honesto de lo que significa despertar cada día con la mente encendida, saltando entre pensamientos, pendientes e ideas sin descanso. Este primer capítulo de El diario del otro yo narra el peso invisible de pensar demasiado, la lucha interna entre la productividad y la libertad creativa, y el deseo de encontrar silencio en medio del ruido. "
 pubDate: 2025-05-13
 draft: true
-image: "/chapter-01.png"
+image: "@/assets/images/chapter-01.webp"
 author: "Sombra"
 language: "es"
 ---
