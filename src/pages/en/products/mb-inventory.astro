@@ -8,6 +8,8 @@ import {
   Users,
   BadgeCheck,
 } from "@lucide/astro";
+import Inventory from "@/assets/images/prod.webp";
+import { Image } from "astro:assets";
 
 const data = [
   {
@@ -74,12 +76,12 @@ const data = [
         </div>
       </div>
       <div>
-        <img
-          src="/prod.webp"
+        <Image
+          src={Inventory}
           alt="inventory"
-          loading="lazy"
-          draggable="false"
+          class="rounded-full size-20 md:size-44 object-cover aspect-square"
           class="mix-blend-multiply border border-secondary/10 rounded-lg shadow-lg"
+          draggable="false"
         />
       </div>
     </section>

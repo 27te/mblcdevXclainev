@@ -8,6 +8,9 @@ import {
   Building,
   CodeXml,
 } from "@lucide/astro";
+import { Image } from "astro:assets";
+import Profile from "@/assets/images/image.webp";
+import Logo from "@/assets/images/05.webp";
 import Layout from "../../layouts/Layout.astro";
 ---
 
@@ -21,16 +24,11 @@ import Layout from "../../layouts/Layout.astro";
     <section class="flex flex-col mb-5">
       <div class="flex md:block items-center gap-4">
         <div class="relative size-20 md:size-44">
-          <img
-            src="/image.webp"
+          <Image
+            src={Profile}
             alt="antonio-profile"
-            loading="lazy"
-            decoding="async"
-            class="rounded-full
-            size-20
-            md:size-44
-            object-cover
-            aspect-square"
+            class="rounded-full size-20 md:size-44 object-cover aspect-square"
+            format="webp"
           />
           <div
             class="absolute bg-black rounded-full p-1 top-0 md:top-5 left-0 md:left-2"
@@ -99,10 +97,11 @@ import Layout from "../../layouts/Layout.astro";
         <hr />
         <div class="mt-4">
           <h3 class="font-bold text-lg text-start">Organizations</h3>
-          <img
-            src="/05.webp"
+          <Image
+            src={Logo}
             alt="mblcdev-logo"
             class="size-12 aspect-video bg-black rounded-md mt-2"
+            format="webp"
           />
         </div>
       </div>
