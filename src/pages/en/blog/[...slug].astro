@@ -1,15 +1,24 @@
 ---
 import { getCollection, render } from "astro:content";
 import Blog from "../../../layouts/Blog.astro";
-export const getStaticPaths = async () => {
-  const blog = await getCollection("blog");
-  const blogFiltered = blog.filter((post) => post.id.startsWith("en/"));
 
-  return blogFiltered.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+export const getStaticPaths = async () => {
+  const posts = await getCollection("blog");
+
+  const enPosts = posts.filter((post) => post.id.startsWith("en/"));
+
+  return enPosts.map((post) => {
+    const slugClean = post.slug.replace(/^en\//, "");
+
+    const slugParam = slugClean;
+
+    return {
+      params: { slug: slugParam },
+      props: { post },
+    };
+  });
 };
+
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---

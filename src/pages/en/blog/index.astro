@@ -3,26 +3,25 @@ import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
 
 const pageTitle = "My Astro Learning Blog";
-const allPosts = await getCollection("blog");
-const allPostsFiltered = allPosts.filter((post) => {
-  const isNotDraft = post.data.draft === true;
-  const isSpanishContent = post.id.startsWith("en/");
-  const hasValidSlug = post.slug.includes("en/");
+const posts = await getCollection("blog");
 
-  return isNotDraft && isSpanishContent && hasValidSlug;
-});
-console.log(allPostsFiltered);
+const enPosts = posts.filter(
+  (post) => post.id.startsWith("en/") && post.data.draft !== true
+);
 ---
 
 <Layout title={pageTitle} description={pageTitle}>
   <main class="max-w-[80ch] mt-40 mx-auto">
     <ul>
       {
-        allPostsFiltered.map((post) => (
-          <li>
-            <a href={`${post.slug}`}>{post.data.title}</a>
-          </li>
-        ))
+        enPosts.map((post) => {
+          const slugClean = post.slug.replace(/^en\//, "");
+          return (
+            <li>
+              <a href={`/en/blog/${slugClean}`}>{post.data.title}</a>
+            </li>
+          );
+        })
       }
     </ul>
   </main>
