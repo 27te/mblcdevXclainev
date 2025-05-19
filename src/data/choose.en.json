@@ -1,0 +1,55 @@
+{
+  "header": ["", "mblcdev", "Freelancers", "Other agencies"],
+  "labels": [
+    "Cost",
+    "Team",
+    "Delivery time",
+    "Immediate start",
+    "Revisions and support",
+    "Follow-up",
+    "Scalability",
+    "Flexibility"
+  ],
+  "rows": [
+    [
+      "Flexible and transparent plans",
+      "Cheap but unpredictable",
+      "Expensive and hourly"
+    ],
+    [
+      "Developers and designers with vision and commitment",
+      "Quality varies a lot",
+      "Uneven level, changes per project"
+    ],
+    [
+      "1 - 2 weeks on average",
+      "Depends on availability",
+      "Slow due to workload"
+    ],
+    [
+      "We start from day 1",
+      "Delays, filters, availability",
+      "Bureaucracy and slow contracts"
+    ],
+    [
+      "Up to 1 year of revisions / maintenance included",
+      "Each change costs time and money",
+      "Limited revision by contract"
+    ],
+    [
+      "We're building a portal just for you",
+      "No clear follow-up",
+      "Confusing internal systems"
+    ],
+    [
+      "We scale with you according to your plan",
+      "Limited to what they can do",
+      "Slow and expensive to scale"
+    ],
+    [
+      "Pause, cancel, or scale as needed",
+      "Flexible but no guarantees",
+      "Rigid, per project or contract"
+    ]
+  ]
+}

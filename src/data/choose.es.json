@@ -1,0 +1,55 @@
+{
+  "header": ["", "mblcdev", "Freelancers", "Otras agencias"],
+  "labels": [
+    "Costo",
+    "Equipo",
+    "Tiempo de entrega",
+    "Inicio Inmediato",
+    "Revisiones y soporte",
+    "Seguimiento",
+    "Escalabilidad",
+    "Flexibilidad"
+  ],
+  "rows": [
+    [
+      "Planes flexibles y transparentes",
+      "Barato, pero impredecible",
+      "Costoso y por horas"
+    ],
+    [
+      "Desarrolladores y diseñadores con visión y compromiso",
+      "Varia mucho según quien toque",
+      "Nivel desigual, cambia por proyecto"
+    ],
+    [
+      "1 - 2 semanas promedio",
+      "Depende de su disponibilidad",
+      "Lentos por carga de trabajo"
+    ],
+    [
+      "Empezamos desde el día 1",
+      "Demoras, filtros, disponibilidad",
+      "Burocracia y contratos lentos"
+    ],
+    [
+      "Hasta 1 año de revisiones / mantenimiento incluido",
+      "Cada cambio cuesta tiempo y dinero",
+      "Revisión limitada por contrato"
+    ],
+    [
+      "Estamos armando un portal solo para ti",
+      "No hay seguimiento claro",
+      "Sistemas internos confusos"
+    ],
+    [
+      "Escalamos contigo según tu plan",
+      "Limitado a lo que puede hacer",
+      "Lento y costoso escalar"
+    ],
+    [
+      "Pausas, cancelas o escalas cuando lo requieras",
+      "Flexible pero sin garantías",
+      "Rígido, por proyecto o contrato"
+    ]
+  ]
+}
