@@ -2,26 +2,26 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
-const pageTitle = "My other person";
-const allPosts = await getCollection("books");
-const allPostsFiltered = allPosts.filter((post) => {
-  const isNotDraft = post.data.draft === true;
-  const isSpanishContent = post.id.startsWith("es/");
-  const hasValidSlug = post.slug.includes("es/");
+const pageTitle = "Bienvenido a mi pagina de libros";
+const posts = await getCollection("books");
 
-  return isNotDraft && isSpanishContent && hasValidSlug;
-});
+const enPosts = posts.filter(
+  (post) => post.id.startsWith("es/") && post.data.draft !== true
+);
 ---
 
 <Layout title={pageTitle} description={pageTitle}>
   <main class="max-w-[80ch] mt-40 mx-auto px-4">
     <ul>
       {
-        allPostsFiltered.map((post) => (
-          <li>
-            <a href={`${post.slug}`}>{post.data.title}</a>
-          </li>
-        ))
+        enPosts.map((post) => {
+          const slugClean = post.slug.replace(/^es\//, "");
+          return (
+            <li>
+              <a href={`/books/${slugClean}`}>{post.data.title}</a>
+            </li>
+          );
+        })
       }
     </ul>
   </main>
