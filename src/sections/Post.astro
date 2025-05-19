@@ -1,0 +1,65 @@
+---
+import { getCollection } from "astro:content";
+import SectionHeader from "../components/ui/SectionHeader.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const sectionTitle = lang === "es" ? "Blog" : "Blog";
+
+const allPosts = await getCollection("blog");
+
+const allPostsFiltered = allPosts.filter((post) => {
+  const isNotDraft = post.data.draft != true;
+  const isCorrectLanguage = post.id.startsWith(`${lang}/`);
+  return isNotDraft && isCorrectLanguage;
+});
+---
+
+<section class="container mx-auto px-4 mt-20">
+  <SectionHeader title={sectionTitle} />
+  <div class="flex justify-center items-center flex-wrap gap-6">
+    {
+      allPostsFiltered.map((post) => {
+        const slugWithoutLang = post.slug.replace(`${lang}/`, "");
+        const url =
+          lang === "es"
+            ? `/blog/${slugWithoutLang}`
+            : `/${lang}/blog/${slugWithoutLang}`;
+
+        return (
+          <article class="border border-secondary/10 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+            {/* {post.data.image && (
+              <img
+                src={post.data.image}
+                alt={post.data.title}
+                class="w-full h-48 object-cover rounded-lg mb-4"
+                loading="lazy"
+                decoding="async"
+              />
+            )} */}
+            <h3 class="text-xl font-bold mb-2">{post.data.title}</h3>
+            <p class="text-secondary/80 mb-4 line-clamp-3">
+              {post.data.description}
+            </p>
+            <div class="flex justify-between items-center text-sm text-secondary/60">
+              <span>{post.data.author}</span>
+              <time>
+                {new Date(post.data.pubDate).toLocaleDateString(
+                  lang === "es" ? "es-ES" : "en-US",
+                  { year: "numeric", month: "short", day: "numeric" }
+                )}
+              </time>
+            </div>
+            <a
+              href={url}
+              class="mt-4 inline-block text-primary hover:underline"
+            >
+              {lang === "es" ? "Leer más" : "Read more"}
+            </a>
+          </article>
+        );
+      })
+    }
+  </div>
+</section>

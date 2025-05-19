@@ -1,5 +1,7 @@
 ---
 import { getLangFromUrl } from "../i18n/utils";
+import { Image } from "astro:assets";
+import Forest from "@/assets/images/forest.webp";
 
 const data = {
   en: {
@@ -24,12 +26,13 @@ const lang = getLangFromUrl(Astro.url);
 <section
   class="min-h-screen overflow-hidden relative flex flex-col justify-center items-center px-4"
 >
-  <img
-    src="/forest.webp"
-    alt="bg"
-    loading="lazy"
+  <Image
+    src={Forest}
+    alt="background"
+    draggable="false"
     class="absolute left-0 top-0 w-screen h-screen opacity-75 -z-10 mix-blend-multiply object-cover mask-b-to-transparent"
   />
+
   <div
     class="w-full md:w-[70%] mx-auto text-secondary flex flex-col justify-center gap-5"
   >
@@ -54,13 +57,13 @@ const lang = getLangFromUrl(Astro.url);
           data-cal-link="mblcdev/15min"
           data-cal-namespace="15min"
           data-cal-config='{"layout":"month_view"}'
-          class="button-blur-reveal hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 bg-quaternary text-tertiary overflow-hidden font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
+          class="button-blur-reveal will-change-transform hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 bg-quaternary text-tertiary overflow-hidden font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
         >
           {data[lang].btnOne}
         </button>
         <a
           href="#services"
-          class="button-blur-reveal hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 overflow-hidden bg-secondary text-tertiary font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
+          class="button-blur-reveal will-change-transform hover:scale-[1.02] active:scale-[0.98] text-center px-8 py-4 overflow-hidden bg-secondary text-tertiary font-medium rounded-lg transition-transform duration-150 antialiased shadow-lg"
         >
           {data[lang].btnTwo}
         </a>
@@ -74,10 +77,12 @@ const lang = getLangFromUrl(Astro.url);
     opacity: 0;
     transform: translateY(20px);
   }
+
   .button-blur-reveal {
     filter: blur(10px);
     opacity: 0;
     transform: translateY(20px);
+    will-change: transform;
   }
 </style>
 <script>
@@ -100,13 +105,16 @@ const lang = getLangFromUrl(Astro.url);
       ease: "power3.out",
       delay: 0.4,
     });
-    gsap.to(".button-blur-reveal", {
-      duration: 1.2,
-      opacity: 1,
-      filter: "blur(0px)",
-      y: 0,
-      ease: "power3.out",
-      delay: 0.6,
+
+    document.querySelectorAll(".button-blur-reveal").forEach((el, i) => {
+      gsap.to(el, {
+        duration: 1.2,
+        opacity: 1,
+        filter: "blur(0px)",
+        y: 0,
+        ease: "power3.out",
+        delay: 0.6 + i * 0.1,
+      });
     });
   });
 </script>

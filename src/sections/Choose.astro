@@ -1,0 +1,64 @@
+---
+import SectionHeader from "../components/ui/SectionHeader.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const data = await import(`../data/choose.${lang}.json`);
+const chooseHeaders = data.default.header;
+const chooseLabels = data.default.labels;
+const chooseRows = data.default.rows;
+const sectionTitle = lang == "es" ? "Porque elegirnos" : "Why choose us";
+---
+
+<section class="mt-20 px-4">
+  <SectionHeader title={sectionTitle} />
+  <div class="w-full overflow-x-auto">
+    <div
+      class="rounded-lg flex flex-col min-w-[800px] md:min-w-full max-w-[1200px] mx-auto"
+    >
+      <!-- Encabezado -->
+      <div>
+        <ul class="grid grid-cols-4">
+          {
+            chooseHeaders.map((header: any) => (
+              <li class="p-4 font-medium text-secondary text-sm md:text-base">
+                {header}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Contenido -->
+      <div class="grid grid-cols-4 bg-primary/10 rounded-lg shadow-lg">
+        <!-- Columna izquierda: etiquetas -->
+        <div class="col-span-1">
+          <ul
+            class="grid grid-cols-1 bg-secondary h-full rounded-lg gap-4 shadow-lg"
+          >
+            {
+              chooseLabels.map((label: any) => (
+                <li class="p-4 text-xs md:text-sm font-medium text-tertiary">
+                  {label}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <!-- Comparaciones -->
+        <div class="col-span-3 flex flex-col gap-4 h-full">
+          {
+            chooseRows.map((row: any) => (
+              <ul class="grid grid-cols-3">
+                {row.map((item: any) => (
+                  <li class="p-4 text-xs md:text-sm font-medium">{item}</li>
+                ))}
+              </ul>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
