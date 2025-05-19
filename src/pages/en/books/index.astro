@@ -11,18 +11,54 @@ const enPosts = posts.filter(
 ---
 
 <Layout title={pageTitle} description={pageTitle}>
-  <main class="max-w-[80ch] mt-40 mx-auto px-4">
-    <ul>
-      {
-        enPosts.map((post) => {
-          const slugClean = post.slug.replace(/^en\//, "");
-          return (
-            <li>
-              <a href={`/en/books/${slugClean}`}>{post.data.title}</a>
-            </li>
-          );
-        })
-      }
-    </ul>
+  <main class="mt-40 px-4 w-full md:w-[70%] mx-auto">
+    <div
+      class="flex gap-4 justify-center lg:items-start w-full lg:flex-row flex-col items-center"
+    >
+      <figure class="w-auto lg:w-96 h-[600px] mb-10">
+        <img
+          src="/books/diario-del-otro-yo.webp"
+          alt="Cover of 'The Diary of the Other Self'"
+          class="w-96 h-[600px] rounded-lg aspect-auto object-cover shadow-lg border-6 border-primary"
+        />
+        <figcaption
+          class="mt-2 text-sm italic text-center text-muted-foreground"
+        >
+          “I'm not an external voice. I'm what you won't silence.”
+        </figcaption>
+      </figure>
+
+      <div class="lg:w-1/2 w-full">
+        <h1 class="text-2xl font-bold mb-5">The Diary of the Other Self</h1>
+        <div>
+          <p class="font-medium text-secondary/70 mb-10">
+            *The Diary of the Other Self* is an intimate and reflective work
+            that delves into the hidden corners of the mind through a fictional
+            character named Sombra. More than a traditional story with plot and
+            resolution, this diary acts as a window into the inner world of
+            someone living in constant dialogue with themselves, caught between
+            the need to understand and the urgency to express what they feel.
+          </p>
+          <ul>
+            {
+              enPosts.map((post) => {
+                const slugClean = post.slug.replace(/^en\//, "");
+                return (
+                  <li class="flex justify-start items-center gap-2 text-base font-medium">
+                    <span class="h-5 w-5 bg-primary block rounded-full" />
+                    <a
+                      href={`/en/books/${slugClean}`}
+                      class="hover:text-primary"
+                    >
+                      {post.data.title}
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>
