@@ -78,16 +78,20 @@ const translatePath = useTranslatedPath(lang);
 </header>
 
 <script>
-  const navToggle = document.getElementById("nav-toggle");
-  const navMenu = document.getElementById("nav-menu");
-  let isOpen = false;
+  function toggleNav() {
+    const navToggle = document.getElementById("nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    let isOpen = false;
 
-  navToggle?.addEventListener("click", () => {
-    isOpen = !isOpen;
-    if (isOpen) {
-      navMenu?.style.setProperty("max-height", `${navMenu.scrollHeight}px`);
-    } else {
-      navMenu?.style.setProperty("max-height", "0px");
-    }
-  });
+    navToggle?.addEventListener("click", () => {
+      isOpen = !isOpen;
+      if (isOpen) {
+        navMenu?.style.setProperty("max-height", `${navMenu.scrollHeight}px`);
+      } else {
+        navMenu?.style.setProperty("max-height", "0px");
+      }
+    });
+  }
+
+  toggleNav();
 </script>
