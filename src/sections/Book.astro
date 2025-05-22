@@ -1,63 +1,25 @@
 ---
-import { getCollection } from "astro:content";
 import SectionHeader from "../components/ui/SectionHeader.astro";
 import { getLangFromUrl } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const sectionTitle = lang === "es" ? "Libros" : "Books";
-
-const allBooks = await getCollection("books");
-const allBooksFiltered = allBooks.filter((book) => {
-  const isNotDraft = book.data.draft != true;
-  const isCorrectLanguage = book.id.startsWith(`${lang}/`);
-  return isNotDraft && isCorrectLanguage;
-});
 ---
 
 <section class="container mx-auto px-4 mt-20">
   <SectionHeader title={sectionTitle} />
-  <div class="flex justify-center items-center flex-wrap gap-6">
-    {
-      allBooksFiltered.map((book) => {
-        const slugWithoutLang = book.slug.replace(`${lang}/`, "");
-        const url =
-          lang === "es"
-            ? `/books/${slugWithoutLang}`
-            : `/${lang}/books/${slugWithoutLang}`;
-
-        return (
-          <article class="border border-secondary/10 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-            {book.data.image && (
-              <img
-                src={book.data.image}
-                alt={book.data.title}
-                class="w-full h-48 object-cover rounded-lg mb-4"
-                loading="lazy"
-                decoding="async"
-              />
-            )}
-            <h3 class="text-xl font-bold mb-2">{book.data.title}</h3>
-            <p class="text-secondary/80 mb-4 line-clamp-3">
-              {book.data.description}
-            </p>
-            <div class="flex justify-between items-center text-sm text-secondary/60">
-              <span>{book.data.author}</span>
-              <time>
-                {new Date(book.data.pubDate).toLocaleDateString(
-                  lang === "es" ? "es-ES" : "en-US",
-                  { year: "numeric", month: "short", day: "numeric" }
-                )}
-              </time>
-            </div>
-            <a
-              href={url}
-              class="mt-4 inline-block text-primary hover:underline"
-            >
-              {lang === "es" ? "Leer más" : "Read more"}
-            </a>
-          </article>
-        );
-      })
-    }
-  </div>
+  <a
+    href="/books"
+    title="el-diario-del-otro-yo"
+    class="m-0 p-0 flex justify-center flex-col items-center"
+  >
+    <img
+      src="/cover.png"
+      alt="cover-el-diario-del-otro-yo"
+      transition:name="cover-book"
+      class="h-96 aspect-auto block hover:scale-[1.02] active:scale-[0.98] transition-transform duration-150"
+    />
+    <h2 class="text-lg font-semibold">El Diario Del Otro Yo</h2>
+    <span class="text-sm font-medium text-opacity">Sombra</span>
+  </a>
 </section>

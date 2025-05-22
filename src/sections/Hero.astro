@@ -8,14 +8,14 @@ const data = {
     title: "Your Problem, Our",
     titleWord: "Solution",
     text: "Our goal is to simplify the complex, and give you the right tools to focus on growing.",
-    btnOne: "Discover how we can help you",
+    btnOne: "Schedule a meeting",
     btnTwo: "Services",
   },
   es: {
     title: "Tu Problema, Nuestra",
     titleWord: "Solución",
     text: "Nuestro objetivo es simplificar lo complejo, y darte las herramientas adecuadas para que puedas concentrarte en crecer.",
-    btnOne: "Descubre cómo podemos ayudarte",
+    btnOne: "Agendar una reunión",
     btnTwo: "Servicios",
   },
 };
@@ -88,7 +88,7 @@ const lang = getLangFromUrl(Astro.url);
 <script>
   import { gsap } from "gsap";
 
-  window.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     gsap.to("#title", {
       duration: 1.2,
       opacity: 1,
