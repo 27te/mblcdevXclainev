@@ -1,15 +1,21 @@
 ---
 import SectionHeader from "../components/ui/SectionHeader.astro";
-import { getLangFromUrl } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const sectionTitle = lang === "es" ? "Libros" : "Books";
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <section class="container mx-auto px-4 mt-20">
   <SectionHeader title={sectionTitle} />
   <a
-    href="/books"
+    href={translatePath("/books")}
     title="el-diario-del-otro-yo"
     class="m-0 p-0 flex justify-center flex-col items-center"
   >
