@@ -47,8 +47,11 @@ const enPosts = posts.filter(
                 const slugClean = post.slug.replace(/^es\//, "");
                 return (
                   <li class="flex justify-start items-center gap-2 text-base font-medium">
-                    <span class="h-5 w-5 bg-primary block rounded-full" />
-                    <a href={`/books/${slugClean}`} class="hover:text-primary">
+                    <span class="h-3 w-3 bg-primary block rounded-full" />
+                    <a
+                      href={`/books/${slugClean}`}
+                      class="hover:text-primary text-sm sm:text-base"
+                    >
                       {post.data.title}
                     </a>
                   </li>

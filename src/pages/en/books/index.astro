@@ -17,9 +17,10 @@ const enPosts = posts.filter(
     >
       <figure class="w-auto lg:w-96 h-[600px] mb-10">
         <img
-          src="/books/diario-del-otro-yo.webp"
-          alt="Cover of 'The Diary of the Other Self'"
-          class="w-96 h-[600px] rounded-lg aspect-auto object-cover shadow-lg border-6 border-primary"
+          src="/cover.png"
+          alt="Portada de El diario del otro yo"
+          class="w-96 h-[500px] rounded-lg aspect-auto"
+          transition:name="cover-book"
         />
         <figcaption
           class="mt-2 text-sm italic text-center text-muted-foreground"
@@ -45,10 +46,10 @@ const enPosts = posts.filter(
                 const slugClean = post.slug.replace(/^en\//, "");
                 return (
                   <li class="flex justify-start items-center gap-2 text-base font-medium">
-                    <span class="h-5 w-5 bg-primary block rounded-full" />
+                    <span class="h-3 w-3 bg-primary block rounded-full" />
                     <a
                       href={`/en/books/${slugClean}`}
-                      class="hover:text-primary"
+                      class="hover:text-primary text-sm sm:text-base"
                     >
                       {post.data.title}
                     </a>
