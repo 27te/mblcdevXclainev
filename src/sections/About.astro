@@ -1,0 +1,45 @@
+---
+import SectionHeader from "@/components/ui/SectionHeader.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const sectionTitle = lang === "es" ? "Nuestro Equipo" : "Our Team";
+const text =
+  lang === "es"
+    ? "Un grupo pequeño pero imparable, obsesionado con hacer software que funcione, impacte y se sienta."
+    : "A small but unbreakable group, obsessed with making software that works, impacts and feels.";
+---
+
+<section class="container mx-auto px-4 mt-20">
+  <SectionHeader title={sectionTitle} />
+  <p class="text-center mb-10">
+    {text}
+  </p>
+  <div>
+    <ul>
+      <li class="flex flex-col justify-center items-center">
+        <a
+          href="https://27te.mblcdev.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="27te founder, ceo y cto de mblcdev"
+        >
+          <img
+            src="/27te.webp"
+            alt="27te founder, ceo y cto de mblcdev"
+            title="27te founder, ceo y cto de mblcdev"
+            draggable="false"
+            loading="lazy"
+            decoding="async"
+            class="size-40 drop-shadow-xs"
+          />
+        </a>
+        <h3 class="text-xl font-bold mt-2">Antonio (27te)</h3>
+        <span class="font-bold text-sm text-primary">
+          Founder & Strategy Lead
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
