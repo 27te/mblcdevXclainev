@@ -71,12 +71,3 @@ Quizá mañana tenga más claridad.
 Quizá no.
 
 Pero hoy, esto es lo que hay.
-
----
-
-**“El diario del otro yo”** es una obra original escrita por [27te](https://27te.mblcdev.com).
-
-Puedes compartir este texto si crees que puede ayudar a alguien, pero por favor, no olvides mencionar su origen y respetar su esencia.  
-_Sombra_ es de todos, pero las palabras son mías.
-
-🌀 Licencia: [Creative Commons Atribución-SinDerivadas 4.0](https://creativecommons.org/licenses/by-nd/4.0/deed.es)

@@ -71,12 +71,3 @@ Maybe tomorrow I’ll have more clarity.
 Maybe not.
 
 But today, this is what I’ve got.
-
----
-
-**"The Diary of the Other Self"** is an original work written by [27te](https://27te.mblcdev.com).
-
-You can share this text if you think it can help someone, but please don't forget to mention its origin and respect its essence.  
-_Sombra_ belongs to everyone, but the words are mine.
-
-🌀 License: [Creative Commons Atribución-SinDerivadas 4.0](https://creativecommons.org/licenses/by-nd/4.0/deed.es)
