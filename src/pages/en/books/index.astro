@@ -30,16 +30,19 @@ const enPosts = posts.filter(
       </figure>
 
       <div class="lg:w-1/2 w-full">
-        <h1 class="text-2xl font-bold mb-5">The Diary of the Other Self</h1>
+        <h1 class="text-2xl font-bold mb-5 font-display tracking-wider">
+          The Diary of the Other Self
+        </h1>
         <div>
           <p class="font-medium text-secondary/70 mb-10">
-            *The Diary of the Other Self* is an intimate and reflective work
-            that delves into the hidden corners of the mind through a fictional
+            The Diary of the Other Self is an intimate and reflective work that
+            delves into the hidden corners of the mind through a fictional
             character named Sombra. More than a traditional story with plot and
             resolution, this diary acts as a window into the inner world of
             someone living in constant dialogue with themselves, caught between
             the need to understand and the urgency to express what they feel.
           </p>
+          <h3 class="text-2xl font-display font-medium mb-2">Chapters</h3>
           <ul>
             {
               enPosts.map((post) => {
@@ -58,6 +61,7 @@ const enPosts = posts.filter(
               })
             }
           </ul>
+          <p class="mt-6 text-opacity">More chapters coming soon…</p>
         </div>
       </div>
     </div>

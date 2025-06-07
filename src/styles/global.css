@@ -8,13 +8,6 @@
   font-display: swap;
 }
 
-@font-face {
- font-family:Array;
- font-size: 100 900;  
- src:url("../assets/fonts/array.woff2") format("woff2");
- font-display: swap;
-}
-
 @font-face{
   font-family: Display;
   font-size:100 900;
@@ -32,8 +25,7 @@
   --radius-lg:0.75rem;
   --normal-cursor:url('/normal.cur'),auto;
   --pointer-cursor:url("/pointer.cur"),pointer;
-  --font-array:Array;
   --font-sans:Inter, system-ui, sans-serif;
-  --font-display:Display;
+  --font-display:Display, sans-serif;
 }
 

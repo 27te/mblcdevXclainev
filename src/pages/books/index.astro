@@ -30,7 +30,9 @@ const enPosts = posts.filter(
       </figure>
 
       <div class="lg:w-1/2 w-full">
-        <h1 class="text-2xl font-bold mb-5">El Diario del otro yo</h1>
+        <h1 class="text-2xl font-bold mb-5 font-display tracking-wider">
+          El Diario del otro yo
+        </h1>
         <div>
           <p class="text-secondary/80 mb-10 text-base">
             El diario del otro yo es una obra íntima y reflexiva que se adentra
@@ -41,7 +43,8 @@ const enPosts = posts.filter(
             entre la necesidad de entender y la urgencia de expresar lo que
             siente.
           </p>
-          <ul class="">
+          <h3 class="text-2xl font-display font-medium mb-2">Capítulos</h3>
+          <ul>
             {
               enPosts.map((post) => {
                 const slugClean = post.slug.replace(/^es\//, "");
@@ -59,6 +62,7 @@ const enPosts = posts.filter(
               })
             }
           </ul>
+          <p class="mt-6 text-opacity">Más capítulos próximamente…</p>
         </div>
       </div>
     </div>
