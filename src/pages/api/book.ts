@@ -6,6 +6,7 @@ export async function GET({ params, request }) {
   const data = dataFilter.map((post) => {
     return {
       slug: post.slug,
+      data: post.data,
     };
   });
   return new Response(JSON.stringify(data), {
