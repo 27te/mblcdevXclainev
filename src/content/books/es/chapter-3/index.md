@@ -3,7 +3,7 @@ title: "Capítulo 3 — El reflejo sin rostro"
 description: "Un intento de conexión frente al espejo que no trajo respuestas, solo preguntas. Sombra relata una madrugada silenciosa donde el acto de mirarse se convierte en una búsqueda frustrada de identidad. Un capítulo sobre la incomodidad de no reconocerse y la ternura inesperada de saberse perdido."
 pubDate: 2025-06-10
 draft: false
-image: "/books/chapter-x.webp"
+image: "/books/diario-del-otro-yo.webp"
 author: "Sombra"
 language: "es"
 ---
