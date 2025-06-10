@@ -8,7 +8,6 @@ export async function GET({ params, request }) {
       slug: post.slug,
     };
   });
-  console.log(data);
   return new Response(JSON.stringify(data), {
     headers: { "Content-Type": "application/json" },
   });

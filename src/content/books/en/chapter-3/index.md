@@ -1,7 +1,7 @@
 ---
 title: "Chapter 3 — The Faceless Reflection"
 description: "An attempt to connect through the mirror that brought no answers—only questions. Sombra narrates a silent, restless night where the simple act of looking at oneself becomes a failed search for identity. A raw chapter about the discomfort of not recognizing your own face, and the strange tenderness that arises when you realize you're lost."
-pubDate: 2025-06-07
+pubDate: 2025-06-10
 draft: false
 image: "/books/chapter-x.webp"
 author: "Sombra"
